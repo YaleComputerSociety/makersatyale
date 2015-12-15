@@ -1,0 +1,16 @@
+{
+  "name": "Felipe Pires",
+  "class": 2019,
+  "college": "Ezra Stiles",
+  "bio": "",
+  "interests": "",
+  "abilities": {
+    "programming": "Javascript, C(++), Python, Golang, ...",
+    "social": "",
+  },
+  "resume": "dropboxlink",
+  "links": {
+    "github": "f03lipe",
+    "facebook": "felipearagaopires"
+  }
+}
