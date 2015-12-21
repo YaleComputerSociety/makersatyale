@@ -1,0 +1,17 @@
+{
+  "name": "Summer Wu",
+  "class": 2018,
+  "college": "Morse",
+  "bio": "Hailing from Chicago, currently living in New Haven/Hong Kong, soon headed to San Francisco/New York City/Budapest, endeavoring to explore the world",
+  "interests": "virtual/augmented reality, health tech, tinkering with new technologies, practical projects",
+  "abilities": {
+    "programming": "Python, Django, Java, Android, Javascript, C, Unity, HTML, CSS"
+  },
+  "resume": "https://sumwu.me/static/summer_wu_resume.pdf",
+  "links": {
+    "github": "sw5813",
+    "facebook": "summer.wu.560",
+    "linkedin": "https://www.linkedin.com/profile/view?id=289449779",
+    "website": "https://sumwu.me/"
+  }
+}
