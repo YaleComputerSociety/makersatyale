@@ -1,0 +1,60 @@
+---
+---
+<!DOCTYPE html>
+<html>
+
+{% include head.html %}
+
+<body>
+  {% include header.html %}
+  
+  <!-- this is nonsense-->
+  <form>
+    <section class = "panlist">
+      <div class="form-group">
+        <label for="exampleInputEmail1">Add yourself to our mailing list!</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Your email here">
+      </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+  </section>
+</form>
+<!-- end nonsense-->
+
+  <section class="members coding-members">
+    <div class="container">
+      <div class="section-headers">
+        <h1>Programming</h1>
+        <h2>Here are the students who build software projects.</h2>
+      </div>
+
+      <div class="container members">
+      <div class="row">
+        {% for _member in site.data.members %} 
+        {% assign member = _member[1] %}
+        <div class="member col-md-4 col-xs-12">
+          <div class="picture">
+            <img src="{{ member.picture }}" />
+          </div>
+          <div class="basic-info">
+            <div class="name">{{ member.name }}</div>
+            <div class="college-year">
+              {{ member.college }} {{ member.year }}
+            </div>
+            <div class="skills">{{ member.skills }}</div>
+          </div>
+          <div class="extended-info">
+            <div class="pay">{{ member.pay }}</div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      </div>
+
+
+    </div>
+
+  </section>
+  {% include footer.html %}
+
+</body>
+</html>

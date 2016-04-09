@@ -1,0 +1,47 @@
+---
+---
+<!DOCTYPE html>
+<html>
+  
+{% include head.html %}
+
+<body>
+  
+  {% include header.html %}
+  
+  <section class="member-profile">
+    <div class="container">
+      <div class="row">
+        <ul>
+        {% for _member in site.data.members %}
+        {% assign member = _member[1] %}
+        {% endfor %}
+        </ul>
+        <div class="col-md-4 col-xs-12">
+          <div class="picture">
+            <img src="{{ member.picture }}" />
+          </div>
+        </div>
+        <div class="col-md-8 col-xs-12">
+  
+        <div class="basic-info">
+          <div class = "profile-header">
+            <div class="name">{{ member.name }}</div>
+            <div class="quick-info">{{ member.year }} | {{ member.college }} | {{ member.skills }}</div>
+          </div>
+        </div>
+          
+      </div>
+        
+          
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+  <a href="twitter.com">Twitter</a>
+  <span style="background: yellow; color: red; display: block">
+    more text
+  </span>
+</body>
+</html>
