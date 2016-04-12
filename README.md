@@ -8,7 +8,7 @@ The directory lists individuals, their abilities, past achievements and ways of 
 
 ## Join The List
 
-Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore.
+To join this list, you'll have to create a JSON file inside the `_data/members` folder, with your information. The name of the file should have be formated like `<firstname>.<lastname>.json`.
 
 ## Ideas
 
