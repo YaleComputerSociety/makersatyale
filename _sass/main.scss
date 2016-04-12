@@ -1,0 +1,291 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+// Our variables
+$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$base-font-size:   16px;
+$base-font-weight: 400;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
+
+$spacing-unit:     30px;
+
+$text-color:       #111;
+$background-color: #fdfdfd;
+$brand-color:      #2a7ae2;
+
+$grey-color:       #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
+
+// Width of the content area
+$content-width:    800px;
+
+$on-palm:          600px;
+$on-laptop:        800px;
+
+
+// Use media queries like this:
+// @include media-query($on-palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
+
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+        "base",
+        "layout",
+        "support",
+        "syntax-highlighting"
+;
+
+$blue: #426bba;
+
+.close-btn {
+    cursor: pointer;
+    
+    &:after {
+      display: inline-block;
+      content: "\00d7"; /* This will render the 'X' */
+    }
+    
+    &:hover {
+        color: #222;
+    }
+}
+
+.container {
+    max-width: 960px;
+}
+
+.page-popover {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+    background: white;
+}
+
+.site-header {
+    position: relative;
+    background: $blue;
+    color: white;
+    padding: 50px 40px;    
+    
+    .title-wrapper {
+        color: white;
+        
+        h1 a {
+            text-decoration: none;
+        }
+        a {
+            text-decoration: underline;
+            color: inherit;
+        }
+        h2 {
+        }
+    }
+    
+    .ml-form {
+        label {
+            // display: block;
+            margin-right: 10px;
+            // display: non;
+        }
+        
+        input[name=email] {
+            width: 300px;
+            display: inline-block;
+            // border-radius: 2;
+        }
+        
+        button {
+        }
+    }
+}
+
+.mprofile {
+    
+    
+    padding: 20px;
+    height: 300px;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    margin-top: 50px;
+
+    font: 400 15px "museo-sans";
+    text-align: left;
+    
+    .close-btn {
+        position: absolute;
+        right: 30px;
+        top: 20px;
+        color: #555;
+        // font-weight: bold;
+        font-size: 20px;
+    }
+
+    .picture img {
+        width: 90%;
+        height: 90%;
+        // border-radius: 200px;
+        margin-bottom: 20px;
+        
+        @include transition(.2s);
+    }
+    
+    .mprofile-header {
+        margin-bottom: 20px;
+        
+        .name {
+            font-size: 40px;
+            font-weight: bold;
+        }
+        
+        .quick-info {
+            font-size: 20px;
+        }
+    }
+    
+    .row {
+        margin-bottom: 20px;
+    }
+    
+    .mprofile-item {
+        margin-bottom: 20px;
+
+        label {
+            font-size: 15px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #666;
+        }
+        
+        &.networks {
+            a:hover {
+                text-decoration: none;
+            }
+        }
+        
+        &.skills {
+            ul li {
+                // background: #4A9BFF;
+                background: #EEE;
+                border-bottom: 2px solid #4A9BFF;
+                color: white;
+                color: #222;
+                padding: 4px 6px;
+                // border: 1px solid #19d;
+                margin: 0 4px 5px 0;
+                font-size: 13px;
+            }
+        }
+        
+        &.about {
+            line-height: 2;
+        }
+        
+        &.experience,
+        &.extracurriculars {
+            margin-top: 30px;
+            
+            label {
+                margin-bottom: 10px;
+            }
+            
+            ul li {
+                line-height: 1.5;
+                margin-left: 0;
+            }
+        }
+    }
+    
+    ul.inline-list {
+        margin-left: 0;
+        margin-bottom: -4px;
+        
+        li {
+            display: inline-block;
+            font-size: 15px;
+        }
+    }
+}
+
+section.members {
+    padding: 40px 0;
+    
+    .section-headers {
+        color: #666;
+        
+        h1, h2 {
+            font-weight: bold;
+        }
+        h1 {
+            font-size: 18px;
+        }
+        h2 {
+            font-size: 15px;
+        }
+    }
+    
+    .members {
+        max-width: 900px;
+    }
+}
+
+.member {
+    // width: 300px;
+    padding: 20px;
+    height: 300px;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+
+    font-size: 12px;
+    font-family: "museo-sans";
+
+    .basic-info {
+        font: 400 15px "museo-sans";
+        text-align: left;
+
+        .name {
+            font-size: 16px;
+        }
+        .class {
+        }
+    }
+    
+    .picture img {
+        width: 150px;
+        height: 150px;
+        border-radius: 200px;
+        margin-bottom: 20px;
+        
+        @include transition(.2s);
+
+        &:not(:hover) {
+            @include filter(grayscale, 100%);
+        }
+    }
+}
+
+footer {
+    padding: 40px;
+    background: $grey-color-light;
+}
+
