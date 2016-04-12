@@ -306,25 +306,25 @@ pre {
   bottom: 0;
   background: white; }
 
-.site-header {
+header {
   position: relative;
   background: #426bba;
   color: white;
   padding: 50px 40px; }
-  .site-header .title-wrapper {
+  header .title-wrapper {
     color: white; }
-    .site-header .title-wrapper h1 a {
+    header .title-wrapper h1 a {
       text-decoration: none; }
-    .site-header .title-wrapper a {
+    header .title-wrapper a {
       text-decoration: underline;
       color: inherit; }
-  .site-header .ml-form label {
+  header .ml-form label {
     margin-right: 10px; }
-  .site-header .ml-form input[name=email] {
+  header .ml-form input[name=email] {
     width: 300px;
     display: inline-block; }
 
-.mprofile {
+.profile {
   padding: 20px;
   height: 300px;
   display: inline-block;
@@ -333,13 +333,13 @@ pre {
   margin-top: 50px;
   font: 400 15px "museo-sans";
   text-align: left; }
-  .mprofile .close-btn {
+  .profile .close-btn {
     position: absolute;
     right: 30px;
     top: 20px;
     color: #555;
     font-size: 20px; }
-  .mprofile .picture img {
+  .profile .picture img {
     width: 90%;
     height: 90%;
     margin-bottom: 20px;
@@ -348,25 +348,25 @@ pre {
     -ms-transition: 0.2s;
     -o-transition: 0.2s;
     transition: 0.2s; }
-  .mprofile .mprofile-header {
+  .profile .profile-header {
     margin-bottom: 20px; }
-    .mprofile .mprofile-header .name {
+    .profile .profile-header .name {
       font-size: 40px;
       font-weight: bold; }
-    .mprofile .mprofile-header .quick-info {
+    .profile .profile-header .quick-info {
       font-size: 20px; }
-  .mprofile .row {
+  .profile .row {
     margin-bottom: 20px; }
-  .mprofile .mprofile-item {
+  .profile .profile-item {
     margin-bottom: 20px; }
-    .mprofile .mprofile-item label {
+    .profile .profile-item label {
       font-size: 15px;
       font-weight: bold;
       text-transform: uppercase;
       color: #666; }
-    .mprofile .mprofile-item.networks a:hover {
+    .profile .profile-item.networks a:hover {
       text-decoration: none; }
-    .mprofile .mprofile-item.skills ul li {
+    .profile .profile-item.skills ul li {
       background: #EEE;
       border-bottom: 2px solid #4A9BFF;
       color: white;
@@ -374,19 +374,19 @@ pre {
       padding: 4px 6px;
       margin: 0 4px 5px 0;
       font-size: 13px; }
-    .mprofile .mprofile-item.about {
+    .profile .profile-item.about {
       line-height: 2; }
-    .mprofile .mprofile-item.experience, .mprofile .mprofile-item.extracurriculars {
+    .profile .profile-item.experience, .profile .profile-item.extracurriculars {
       margin-top: 30px; }
-      .mprofile .mprofile-item.experience label, .mprofile .mprofile-item.extracurriculars label {
+      .profile .profile-item.experience label, .profile .profile-item.extracurriculars label {
         margin-bottom: 10px; }
-      .mprofile .mprofile-item.experience ul li, .mprofile .mprofile-item.extracurriculars ul li {
+      .profile .profile-item.experience ul li, .profile .profile-item.extracurriculars ul li {
         line-height: 1.5;
         margin-left: 0; }
-  .mprofile ul.inline-list {
+  .profile ul.inline-list {
     margin-left: 0;
     margin-bottom: -4px; }
-    .mprofile ul.inline-list li {
+    .profile ul.inline-list li {
       display: inline-block;
       font-size: 15px; }
 
@@ -409,6 +409,7 @@ section.members {
   display: inline-block;
   vertical-align: top;
   text-align: center;
+  cursor: pointer;
   font-size: 12px;
   font-family: "museo-sans"; }
   .member .basic-info {

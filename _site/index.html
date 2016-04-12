@@ -171,7 +171,8 @@
 <div class="page-popover"></div>
 
 <script type="text/template" id="tmpl-member">
-  <div class="mprofile">
+<div class="container">
+  <div class="profile">
     <div class="close-btn" onClick="<%= clickOut %>"></div>
     
     <div class="row">
@@ -182,23 +183,23 @@
       </div>
       
       <div class="col-lg-8 col-md-8 col-xs-12">
-        <div class="mprofile-header">
+        <div class="profile-header">
           <div class="name"><%= member.name %></div>
-          <div class="quick-info">Harvard 2006 | Computer Science</div>
+          <div class="quick-info"><%= member.college %> <%= member.year %> | <%= member.major %></div>
         </div>
         
-        <div class="mprofile-item skills">
+        <div class="profile-item skills">
           <ul class="inline-list">
             <li>MySQL</li> <li>PHP</li> <li>Stealing People's Projects</li>
             <li>Wearing Da Hoddie</li>
           </ul>
         </div>
         
-        <div class="mprofile-item about">
+        <div class="profile-item about">
           <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
         </div>
 
-        <div class="mprofile-item networks">
+        <div class="profile-item networks">
           <ul class="inline-list">
             <li><a href="#">github</a></li>
             <li><a href="#">facebook</a></li>
@@ -206,7 +207,7 @@
           </ul>
         </div>
 
-        <div class="mprofile-item experience">
+        <div class="profile-item experience">
           <label>Projects & Experience</label>
           <ul>
             <li>
@@ -220,7 +221,7 @@
           </ul>
         </div>
 
-        <div class="mprofile-item extracurriculars">
+        <div class="profile-item extracurriculars">
             <label>Extra Curriculars &amp; Hobbies</label>
             <ul>
               <li>
@@ -231,6 +232,7 @@
       </div>
     </div>
   </div>
+</div>
 </script>
 
 <script>
@@ -238,7 +240,7 @@
 
 <script>
 
-var members = {"felipe-pires":{"name":"Felipe Pires","year":2019,"college":"Ezra Stiles","picture":"http://graph.facebook.com/100000366187376/picture?width=400&height=400"},"yuxuan-ke":{"name":"Yuxuan Ke","year":2019,"email":"yuxuan.ke","college":"Branford","skills":["I can take off an orange peel in a single piece."],"picture":"http://graph.facebook.com/725133061/picture?width=400&height=400"},"summer-wu":{"name":"Summer Wu","class":2018,"college":"Morse","bio":"Hailing from Chicago, currently living in New Haven/Hong Kong, soon headed to San Francisco/New York City/Budapest, endeavoring to explore the world","interests":"virtual/augmented reality, health tech, tinkering with new technologies, practical projects","abilities":{"programming":"Python, Django, Java, Android, Javascript, C, Unity, HTML, CSS"},"resume":"https://sumwu.me/static/summer_wu_resume.pdf","links":{"github":"sw5813","facebook":"summer.wu.560","linkedin":"https://www.linkedin.com/profile/view?id=289449779","website":"https://sumwu.me/"},"picture":"https://pbs.twimg.com/profile_images/701094340081414145/5qMFdVF1.jpg"},"zeb-mehring":{"name":"Zeb Mehring","year":2019,"email":"zeb.mehring","college":"Morse","skills":["Trust me, I'm a professional."],"picture":"http://graph.facebook.com/100002274614860/picture?width=400&height=400"},"kacha-mahadumrongkul":{"name":"Kacha (Shogun) Mahadumrongkul","year":2019,"email":"kacha.mahadumrongkul","college":"Trumbull","skills":["Sing badly"],"picture":"http://graph.facebook.com/100001182815852/picture?width=400&height=400"},"melina-delgado":{"name":"Melina Delgado","year":2019,"college":"Timothy Dwight","email":"melina.delgado@yale.edu","skills":"music","picture":"http://graph.facebook.com/1196765670/picture?width=400&height=400","major":"Computer Science and Math","about":"Lives in TD.","currentprojects":"Makers at Yale","previousprojects":"None"}};
+var members = {"felipe-pires":{"name":"Felipe Pires","year":2019,"college":"Ezra Stiles","major":"Computer Science & Economics","picture":"http://graph.facebook.com/100000366187376/picture?width=400&height=400"},"yuxuan-ke":{"name":"Yuxuan Ke","year":2019,"email":"yuxuan.ke","college":"Branford","skills":["I can take off an orange peel in a single piece."],"picture":"http://graph.facebook.com/725133061/picture?width=400&height=400"},"summer-wu":{"name":"Summer Wu","class":2018,"college":"Morse","bio":"Hailing from Chicago, currently living in New Haven/Hong Kong, soon headed to San Francisco/New York City/Budapest, endeavoring to explore the world","interests":"virtual/augmented reality, health tech, tinkering with new technologies, practical projects","abilities":{"programming":"Python, Django, Java, Android, Javascript, C, Unity, HTML, CSS"},"resume":"https://sumwu.me/static/summer_wu_resume.pdf","links":{"github":"sw5813","facebook":"summer.wu.560","linkedin":"https://www.linkedin.com/profile/view?id=289449779","website":"https://sumwu.me/"},"picture":"https://pbs.twimg.com/profile_images/701094340081414145/5qMFdVF1.jpg"},"zeb-mehring":{"name":"Zeb Mehring","year":2019,"email":"zeb.mehring","college":"Morse","skills":["Trust me, I'm a professional."],"picture":"http://graph.facebook.com/100002274614860/picture?width=400&height=400"},"kacha-mahadumrongkul":{"name":"Kacha (Shogun) Mahadumrongkul","year":2019,"email":"kacha.mahadumrongkul","college":"Trumbull","skills":["Sing badly"],"picture":"http://graph.facebook.com/100001182815852/picture?width=400&height=400"},"melina-delgado":{"name":"Melina Delgado","year":2019,"college":"Timothy Dwight","email":"melina.delgado@yale.edu","skills":"music","picture":"http://graph.facebook.com/1196765670/picture?width=400&height=400","major":"Computer Science and Math","about":"Lives in TD.","currentprojects":"Makers at Yale","previousprojects":"None"}};
 var tmplMember = _.template($("#tmpl-member").html());
 
 function openMember(mid) {

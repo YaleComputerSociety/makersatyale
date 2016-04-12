@@ -80,7 +80,7 @@ $blue: #426bba;
     background: white;
 }
 
-.site-header {
+header {
     position: relative;
     background: $blue;
     color: white;
@@ -118,9 +118,7 @@ $blue: #426bba;
     }
 }
 
-.mprofile {
-    
-    
+.profile {
     padding: 20px;
     height: 300px;
     display: inline-block;
@@ -149,7 +147,7 @@ $blue: #426bba;
         @include transition(.2s);
     }
     
-    .mprofile-header {
+    .profile-header {
         margin-bottom: 20px;
         
         .name {
@@ -166,7 +164,7 @@ $blue: #426bba;
         margin-bottom: 20px;
     }
     
-    .mprofile-item {
+    .profile-item {
         margin-bottom: 20px;
 
         label {
@@ -255,6 +253,7 @@ section.members {
     display: inline-block;
     vertical-align: top;
     text-align: center;
+    cursor: pointer;
 
     font-size: 12px;
     font-family: "museo-sans";
