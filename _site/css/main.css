@@ -310,14 +310,23 @@ header {
   position: relative;
   background: #426bba;
   color: white;
-  padding: 50px 40px; }
+  padding: 70px 60px;
+  font-family: "museo-sans"; }
   header .title-wrapper {
     color: white; }
-    header .title-wrapper h1 a {
-      text-decoration: none; }
+    header .title-wrapper h1 {
+      font-size: 26px;
+      font-weight: bold; }
+      header .title-wrapper h1 a {
+        text-decoration: none; }
     header .title-wrapper a {
       text-decoration: underline;
       color: inherit; }
+    header .title-wrapper h2 {
+      font-size: 25px;
+      margin-bottom: 20px; }
+    header .title-wrapper h3 {
+      font-size: 20px; }
   header .ml-form label {
     margin-right: 10px; }
   header .ml-form input[name=email] {
@@ -379,10 +388,15 @@ header {
     .profile .profile-item.experience, .profile .profile-item.extracurriculars {
       margin-top: 30px; }
       .profile .profile-item.experience label, .profile .profile-item.extracurriculars label {
-        margin-bottom: 10px; }
+        margin-bottom: 20px; }
       .profile .profile-item.experience ul li, .profile .profile-item.extracurriculars ul li {
         line-height: 1.5;
-        margin-left: 0; }
+        margin-left: 0;
+        margin-bottom: 15px; }
+        .profile .profile-item.experience ul li p, .profile .profile-item.extracurriculars ul li p {
+          margin-bottom: 5px; }
+          .profile .profile-item.experience ul li p p:last-child, .profile .profile-item.extracurriculars ul li p p:last-child {
+            margin-bottom: 0; }
   .profile ul.inline-list {
     margin-left: 0;
     margin-bottom: -4px; }
@@ -400,23 +414,56 @@ section.members {
       font-size: 18px; }
     section.members .section-headers h2 {
       font-size: 15px; }
-  section.members .members {
-    max-width: 900px; }
+  section.members .container-fluid {
+    max-width: 1080px; }
 
 .member {
   padding: 20px;
-  height: 300px;
+  height: 400px;
+  width: 350px;
   display: inline-block;
   vertical-align: top;
   text-align: center;
   cursor: pointer;
   font-size: 12px;
   font-family: "museo-sans"; }
-  .member .basic-info {
+  .member .info {
     font: 400 15px "museo-sans";
     text-align: left; }
-    .member .basic-info .name {
-      font-size: 16px; }
+    .member .info .basics {
+      text-align: center;
+      font-size: 16px;
+      color: #666; }
+      .member .info .basics > * {
+        vertical-align: middle; }
+      .member .info .basics strong {
+        font-weight: normal;
+        color: #000; }
+      .member .info .basics .circle {
+        display: inline-block;
+        width: 7px;
+        height: 7px;
+        background: #888;
+        -moz-border-radius: 50px;
+        -webkit-border-radius: 50px;
+        border-radius: 50px;
+        cursor: pointer;
+        background: #1D4; }
+    .member .info > div {
+      margin-bottom: 15px; }
+    .member .info .skills {
+      font-size: 12px;
+      text-align: center; }
+      .member .info .skills span {
+        line-height: 1.5;
+        display: inline-block;
+        margin: 0 3px 3px 0;
+        background: #08c;
+        color: white;
+        padding: 3px 5px; }
+    .member .info .bio {
+      font-size: 13px;
+      line-height: 1.5; }
   .member .picture img {
     width: 150px;
     height: 150px;

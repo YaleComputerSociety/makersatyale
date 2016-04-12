@@ -84,19 +84,31 @@ header {
     position: relative;
     background: $blue;
     color: white;
-    padding: 50px 40px;    
+    padding: 70px 60px;
+    
+    font-family: "museo-sans";
     
     .title-wrapper {
         color: white;
         
-        h1 a {
-            text-decoration: none;
+        h1 {
+            font-size: 26px;
+            font-weight: bold;
+            
+            a {
+                text-decoration: none;
+            }
         }
+    
         a {
             text-decoration: underline;
             color: inherit;
         }
-        h2 {
+        
+        h2 { font-size: 25px; margin-bottom: 20px; }
+        
+        h3 {
+            font-size: 20px;
         }
     }
     
@@ -203,12 +215,20 @@ header {
             margin-top: 30px;
             
             label {
-                margin-bottom: 10px;
+                margin-bottom: 20px;
             }
             
             ul li {
                 line-height: 1.5;
                 margin-left: 0;
+                margin-bottom: 15px;
+                p {
+                    margin-bottom: 5px;
+                    
+                    p:last-child {
+                        margin-bottom: 0;
+                    }
+                }
             }
         }
     }
@@ -241,15 +261,15 @@ section.members {
         }
     }
     
-    .members {
-        max-width: 900px;
+    .container-fluid {
+        max-width: 1080px;
     }
 }
 
 .member {
-    // width: 300px;
     padding: 20px;
-    height: 300px;
+    height: 400px;
+    width: 350px;
     display: inline-block;
     vertical-align: top;
     text-align: center;
@@ -258,14 +278,59 @@ section.members {
     font-size: 12px;
     font-family: "museo-sans";
 
-    .basic-info {
+    .info {
         font: 400 15px "museo-sans";
         text-align: left;
 
-        .name {
+        .basics {
+            text-align: center;
             font-size: 16px;
+            color: #666;
+            
+            & > * {
+                vertical-align: middle;
+            }
+            
+            strong {
+                font-weight: normal;
+                color: #000;
+            }
+            
+            .circle {
+                display: inline-block;
+                width: 7px;
+                height: 7px;
+                background: #888;
+                -moz-border-radius: 50px;
+                -webkit-border-radius: 50px;
+                border-radius: 50px;
+                cursor: pointer;
+
+                background: #1D4;
+            }
         }
-        .class {
+        
+        & > div {
+            margin-bottom: 15px;
+        }
+        
+        .skills {
+            font-size: 12px;
+            text-align: center;
+            
+            span {
+                line-height: 1.5;
+                display: inline-block;
+                margin: 0 3px 3px 0;
+                background: #08c;
+                color: white;
+                padding: 3px 5px;
+            }
+        }
+        
+        .bio {
+            font-size: 13px;
+            line-height: 1.5;
         }
     }
     

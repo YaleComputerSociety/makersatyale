@@ -6,51 +6,52 @@
 {% include head.html %}
 
 <body>
-  <header class="site-header">
+  <header>
     <div class="title-wrapper">
       <h1><a href="{{ site.baseurl }}/">Makers at Yale</a></h1>
-      <h3>Join people building cool stuff at Yale University.</h3>
+      <h2>Join people building cool stuff at Yale University.</h2>
       <h4>
         Here are <a href="">some</a> <a href="">cool</a> <a href="">stuff</a> people in this list have worked on.
       </h4>
+      <form class="ml-form">
+        <label for="exampleInputEmail1">Add yourself to our mailing list!</label>
+        <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="john.doe@yale.edu">
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
     </div>
-    <form class="ml-form">
-      <label for="exampleInputEmail1">Add yourself to our mailing list!</label>
-      <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="john.doe@yale.edu">
-      <button type="submit" class="btn btn-default">Submit</button>
-    </form>
   </header>
 
-  <section class="members coding-members">
-    <div class="container">
+  <section class="members">
+    <div class="container-fluid">
       <!--
       <div class="section-headers">
         <h1>Programming</h1>
         <h2>Here are the students who build software projects.</h2>
       </div>
       -->
-
-      <div class="container members">
-        <div class="row">
+      <div class="row">
           {% for _member in site.data.members %} {% assign member = _member[1] %}
-          <div class="member col-md-4 col-xs-12" onClick="openMember('{{ _member[0] }}')">
+          <div class="member" onClick="openMember('{{ _member[0] }}')">
             <div class="picture">
               <img src="{{ member.picture }}" />
             </div>
-            <div class="basic-info">
-              <div class="name">{{ member.name }}</div>
-              <div class="college-year">
-                {{ member.college }} {{ member.year }}
+            <div class="info">
+              <div class="basics">
+                {% if member.available %}
+                  <div class="circle available" data-toggle="tooltip" data-placement="bottom" title="Available for projects."></div>
+                {% endif %}
+                <strong>{{ member.name }}</strong>, {{ member.college }} {{ member.year }}
               </div>
-              <div class="skills">{{ member.skills }}</div>
-            </div>
-            <div class="extended-info">
-              <div class="pay">{{ member.pay }}</div>
+              <div class="bio">{{ member.smallBio }}</div>
+              <div class="skills">
+                {% for s in member.skills %}
+                  <span>{{ s }}</span>
+                {% endfor %}
+              </div>
             </div>
           </div>
           {% endfor %}
         </div>
-      </div>
     </div>
 
   </section>
@@ -78,13 +79,14 @@
         
         <div class="profile-item skills">
           <ul class="inline-list">
-            <li>MySQL</li> <li>PHP</li> <li>Stealing People's Projects</li>
-            <li>Wearing Da Hoddie</li>
+          <% _.each(member.skills, function(p) { %>
+            <li><%= p %></li>
+          <% }); %>
           </ul>
         </div>
         
         <div class="profile-item about">
-          <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+          <p><%= member.bio %></p>
         </div>
 
         <div class="profile-item networks">
@@ -98,24 +100,25 @@
         <div class="profile-item experience">
           <label>Projects & Experience</label>
           <ul>
+          <% _.each(member.experience, function (e) { %>
             <li>
-              <strong>Facebook, CEO</strong>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+              <strong><%= e.title %></strong><% if (e.time) { %>, <%= e.time %> <% } %>
+              <p><%= e.detail %></p>
             </li>
-            <li>
-              <strong>Creator, Facemash</strong>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
-            </li>
+          <% }); %>
           </ul>
         </div>
 
         <div class="profile-item extracurriculars">
             <label>Extra Curriculars &amp; Hobbies</label>
-            <ul>
-              <li>
-                asdf
-              </li>
-            </ul>
+          <ul>
+          <% _.each(member.extracurriculars, function (e) { %>
+            <li>
+              <strong><%= e.title %></strong><% if (e.time) { %>, <%= e.time %> <% } %>
+              <p><%= e.detail %></p>
+            </li>
+          <% }); %>
+          </ul>
           </div>
       </div>
     </div>
@@ -141,6 +144,10 @@ function openMember(mid) {
   }
   
 }
+</script>
+
+<script>
+$('[data-toggle="tooltip"]').tooltip()
 </script>
 
 </body>

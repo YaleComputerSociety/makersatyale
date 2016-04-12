@@ -4,4 +4,28 @@
     "college": "Ezra Stiles",
     "major": "Computer Science & Economics",
     "picture": "http://graph.facebook.com/100000366187376/picture?width=400&height=400",
+    "skills": [
+        "Python (Django)", "Backend Js (Node, Express)", "Frontend (React)"
+    ],
+    "experience": [
+        {
+            "title": "Facebook. CEO",
+            "time": "2004-2012",
+            "detail": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        }
+    ],
+    "extracurriculars": [
+        {
+            "title": "Liberal Party",
+            "time": "2016"
+        },
+        {
+            "title": "President of Yale Guild of Makers",
+            "time": "2016",
+            "detail": "The oldest programming club at Yale."
+        }
+    ],
+    "available": true,
+    "bio": "Generalist programmer, focused on web development. Collaborating on great things at YGM. I'm interested in the intersection of computer science and humanities, and that's what defines my Yale experience.",
+    "smallBio": "Generalist programmer, focused on web development. Collaborating on great things at YGM."
 }
