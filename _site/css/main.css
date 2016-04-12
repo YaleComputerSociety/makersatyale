@@ -299,11 +299,7 @@ pre {
     .member-profile .basic-info .profile-header .name {
       font-size: 30px;
       font-weight: bold; }
-    .member-profile .basic-info .profile-header .year {
-      font-size: 14px; }
-    .member-profile .basic-info .profile-header .college {
-      font-size: 14px; }
-    .member-profile .basic-info .profile-header .skills {
+    .member-profile .basic-info .profile-header .quick-info {
       font-size: 14px; }
   .member-profile .picture img {
     width: 300px;
