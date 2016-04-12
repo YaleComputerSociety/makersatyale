@@ -73,8 +73,13 @@
       
       <div class="col-lg-8 col-md-8 col-xs-12">
         <div class="profile-header">
-          <div class="name"><%= member.name %></div>
-          <div class="quick-info"><%= member.college %> <%= member.year %> | <%= member.major %></div>
+          <div class="name">
+            <% if (member.available) { %>
+              <div class="circle available" data-toggle="tooltip" data-placement="top" title="Available for projects."></div>
+            <% } %>
+            <span><%= member.name %></span>
+          </div>
+          <div class="quick-info"><%= member.major %> | <%= member.college %> <%= member.year %></div>
         </div>
         
         <div class="profile-item skills">
@@ -97,6 +102,27 @@
           </ul>
         </div>
 
+        <div class="profile-item extracurriculars">
+          <label>Extra Curriculars &amp; Hobbies</label>
+          <ul>
+          <% _.each(member.extracurriculars, function (e) { %>
+            <li>
+              <strong><%= e.title %></strong><% if (e.time) { %>, <%= e.time %> <% } %>
+              <p><%= e.detail %></p>
+              <% if (e.tags) { %>
+              <ul class="tags">
+                <% _.each(e.tags, function (t) { %>
+                  <li>
+                    <%= t %>
+                  </li>
+                <% }) %>
+              </ul>
+              <% } %>
+            </li>
+          <% }); %>
+          </ul>
+        </div>
+
         <div class="profile-item experience">
           <label>Projects & Experience</label>
           <ul>
@@ -104,22 +130,21 @@
             <li>
               <strong><%= e.title %></strong><% if (e.time) { %>, <%= e.time %> <% } %>
               <p><%= e.detail %></p>
+              <% if (e.tags) { %>
+              <ul class="tags">
+                <% _.each(e.tags, function (t) { %>
+                  <li>
+                    <%= t %>
+                  </li>
+                <% }) %>
+              </ul>
+              <% } %>
+
             </li>
           <% }); %>
           </ul>
         </div>
 
-        <div class="profile-item extracurriculars">
-            <label>Extra Curriculars &amp; Hobbies</label>
-          <ul>
-          <% _.each(member.extracurriculars, function (e) { %>
-            <li>
-              <strong><%= e.title %></strong><% if (e.time) { %>, <%= e.time %> <% } %>
-              <p><%= e.detail %></p>
-            </li>
-          <% }); %>
-          </ul>
-          </div>
       </div>
     </div>
   </div>
@@ -138,11 +163,17 @@ function openMember(mid) {
   if (members[mid] !== "undefined") {
     var html = tmplMember({
       member: members[mid],
-      clickOut: 'jQuery(\'.page-popover\').fadeOut();',
+      clickOut: "closeMember('"+mid+"')",
     });
     $(".page-popover").hide().html(html).fadeIn();
+    $(".members").hide();
+    $('[data-toggle="tooltip"]').tooltip()
   }
-  
+}
+
+function closeMember(mid) {
+  $(".members").show();
+  $('.page-popover').fadeOut();
 }
 </script>
 

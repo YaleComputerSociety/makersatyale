@@ -299,11 +299,10 @@ pre {
 
 .page-popover {
   display: none;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  bottom: 0;
   background: white; }
 
 header {
@@ -336,7 +335,7 @@ header {
 .profile {
   padding: 20px;
   height: 300px;
-  display: inline-block;
+  display: table;
   vertical-align: top;
   text-align: center;
   margin-top: 50px;
@@ -361,7 +360,20 @@ header {
     margin-bottom: 20px; }
     .profile .profile-header .name {
       font-size: 40px;
-      font-weight: bold; }
+      font-weight: bold;
+      margin-bottom: 12px; }
+      .profile .profile-header .name > * {
+        vertical-align: middle; }
+      .profile .profile-header .name .circle {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background: #888;
+        -moz-border-radius: 50px;
+        -webkit-border-radius: 50px;
+        border-radius: 50px;
+        cursor: pointer;
+        background: #1D4; }
     .profile .profile-header .quick-info {
       font-size: 20px; }
   .profile .row {
@@ -376,10 +388,8 @@ header {
     .profile .profile-item.networks a:hover {
       text-decoration: none; }
     .profile .profile-item.skills ul li {
-      background: #EEE;
-      border-bottom: 2px solid #4A9BFF;
+      background: #4A9BFF;
       color: white;
-      color: #222;
       padding: 4px 6px;
       margin: 0 4px 5px 0;
       font-size: 13px; }
@@ -397,6 +407,16 @@ header {
           margin-bottom: 5px; }
           .profile .profile-item.experience ul li p p:last-child, .profile .profile-item.extracurriculars ul li p p:last-child {
             margin-bottom: 0; }
+      .profile .profile-item.experience ul.tags, .profile .profile-item.extracurriculars ul.tags {
+        list-style: none;
+        margin: 0;
+        font-size: 12px; }
+        .profile .profile-item.experience ul.tags li, .profile .profile-item.extracurriculars ul.tags li {
+          background: #EEE;
+          padding: 3px 6px;
+          margin: 0 2px 2px 0;
+          border-bottom: 1px solid #4A9BFF;
+          display: inline-block; }
   .profile ul.inline-list {
     margin-left: 0;
     margin-bottom: -4px; }

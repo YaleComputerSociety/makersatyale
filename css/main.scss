@@ -71,11 +71,11 @@ $blue: #426bba;
 
 .page-popover {
     display: none;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
+    // bottom: 0;
     
     background: white;
 }
@@ -133,7 +133,7 @@ header {
 .profile {
     padding: 20px;
     height: 300px;
-    display: inline-block;
+    display: table;
     vertical-align: top;
     text-align: center;
     margin-top: 50px;
@@ -165,7 +165,27 @@ header {
         .name {
             font-size: 40px;
             font-weight: bold;
+            margin-bottom: 12px;
+            
+            & > * {
+                vertical-align: middle;
+            }
+            
+            .circle {
+                display: inline-block;
+                // margin-left: -20px;
+                width: 10px;
+                height: 10px;
+                background: #888;
+                -moz-border-radius: 50px;
+                -webkit-border-radius: 50px;
+                border-radius: 50px;
+                cursor: pointer;
+    
+                background: #1D4;
+            }
         }
+        
         
         .quick-info {
             font-size: 20px;
@@ -194,11 +214,11 @@ header {
         
         &.skills {
             ul li {
-                // background: #4A9BFF;
-                background: #EEE;
-                border-bottom: 2px solid #4A9BFF;
+                background: #4A9BFF;
+                // background: #EEE;
+                // border-bottom: 2px solid #4A9BFF;
                 color: white;
-                color: #222;
+                // color: #222;
                 padding: 4px 6px;
                 // border: 1px solid #19d;
                 margin: 0 4px 5px 0;
@@ -228,6 +248,20 @@ header {
                     p:last-child {
                         margin-bottom: 0;
                     }
+                }
+            }
+            
+            ul.tags {
+                list-style: none;
+                margin: 0;
+                font-size: 12px;
+                
+                li {
+                    background: #EEE;
+                    padding: 3px 6px;
+                    margin: 0 2px 2px 0;
+                    border-bottom: 1px solid #4A9BFF;
+                    display: inline-block;
                 }
             }
         }
