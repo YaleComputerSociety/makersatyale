@@ -285,44 +285,122 @@ pre {
   .highlight .il {
     color: #099; }
 
-.member-profile {
+.close-btn {
+  cursor: pointer; }
+  .close-btn:after {
+    display: inline-block;
+    content: "\00d7";
+    /* This will render the 'X' */ }
+  .close-btn:hover {
+    color: #222; }
+
+.container {
+  max-width: 960px; }
+
+.page-popover {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: white; }
+
+.site-header {
+  position: relative;
+  background: #426bba;
+  color: white;
+  padding: 50px 40px; }
+  .site-header .title-wrapper {
+    color: white; }
+    .site-header .title-wrapper h1 a {
+      text-decoration: none; }
+    .site-header .title-wrapper a {
+      text-decoration: underline;
+      color: inherit; }
+  .site-header .ml-form label {
+    margin-right: 10px; }
+  .site-header .ml-form input[name=email] {
+    width: 300px;
+    display: inline-block; }
+
+.mprofile {
   padding: 20px;
   height: 300px;
   display: inline-block;
   vertical-align: top;
   text-align: center;
-  font-size: 12px;
-  font-family: "museo-sans"; }
-  .member-profile .basic-info {
-    font: 400 15px "museo-sans";
-    text-align: left; }
-    .member-profile .basic-info .profile-header .name {
-      font-size: 30px;
-      font-weight: bold; }
-    .member-profile .basic-info .profile-header .quick-info {
-      font-size: 14px; }
-  .member-profile .picture img {
-    width: 300px;
-    height: 300px;
-    border-radius: 200px;
+  margin-top: 50px;
+  font: 400 15px "museo-sans";
+  text-align: left; }
+  .mprofile .close-btn {
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    color: #555;
+    font-size: 20px; }
+  .mprofile .picture img {
+    width: 90%;
+    height: 90%;
     margin-bottom: 20px;
     -webkit-transition: 0.2s;
     -moz-transition: 0.2s;
     -ms-transition: 0.2s;
     -o-transition: 0.2s;
     transition: 0.2s; }
-
-section.members.coding-member {
-  padding: 40px 0; }
-  section.members.coding-member .section-headers {
-    color: #666; }
-    section.members.coding-member .section-headers h1, section.members.coding-member .section-headers h2 {
+  .mprofile .mprofile-header {
+    margin-bottom: 20px; }
+    .mprofile .mprofile-header .name {
+      font-size: 40px;
       font-weight: bold; }
-    section.members.coding-member .section-headers h1 {
-      font-size: 18px; }
-    section.members.coding-member .section-headers h2 {
+    .mprofile .mprofile-header .quick-info {
+      font-size: 20px; }
+  .mprofile .row {
+    margin-bottom: 20px; }
+  .mprofile .mprofile-item {
+    margin-bottom: 20px; }
+    .mprofile .mprofile-item label {
+      font-size: 15px;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #666; }
+    .mprofile .mprofile-item.networks a:hover {
+      text-decoration: none; }
+    .mprofile .mprofile-item.skills ul li {
+      background: #EEE;
+      border-bottom: 2px solid #4A9BFF;
+      color: white;
+      color: #222;
+      padding: 4px 6px;
+      margin: 0 4px 5px 0;
+      font-size: 13px; }
+    .mprofile .mprofile-item.about {
+      line-height: 2; }
+    .mprofile .mprofile-item.experience, .mprofile .mprofile-item.extracurriculars {
+      margin-top: 30px; }
+      .mprofile .mprofile-item.experience label, .mprofile .mprofile-item.extracurriculars label {
+        margin-bottom: 10px; }
+      .mprofile .mprofile-item.experience ul li, .mprofile .mprofile-item.extracurriculars ul li {
+        line-height: 1.5;
+        margin-left: 0; }
+  .mprofile ul.inline-list {
+    margin-left: 0;
+    margin-bottom: -4px; }
+    .mprofile ul.inline-list li {
+      display: inline-block;
       font-size: 15px; }
-  section.members.coding-member .members {
+
+section.members {
+  padding: 40px 0; }
+  section.members .section-headers {
+    color: #666; }
+    section.members .section-headers h1, section.members .section-headers h2 {
+      font-weight: bold; }
+    section.members .section-headers h1 {
+      font-size: 18px; }
+    section.members .section-headers h2 {
+      font-size: 15px; }
+  section.members .members {
     max-width: 900px; }
 
 .member {
@@ -358,29 +436,3 @@ section.members.coding-member {
 footer {
   padding: 40px;
   background: #e8e8e8; }
-
-/**
- * Site header
- */
-.site-header {
-  position: relative;
-  background: #426bba;
-  color: white; }
-  .site-header .title-wrapper {
-    padding: 50px 40px;
-    color: white; }
-    .site-header .title-wrapper h1 a {
-      text-decoration: none; }
-    .site-header .title-wrapper a {
-      text-decoration: underline;
-      color: inherit; }
-
-.container {
-  max-width: 960px; }
-
-section.panlist {
-  position: center;
-  width: 50%;
-  vertical-align: top;
-  text-align: center;
-  margin: auto; }

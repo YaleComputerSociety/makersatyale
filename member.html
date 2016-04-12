@@ -2,46 +2,71 @@
 ---
 <!DOCTYPE html>
 <html>
-  
+
 {% include head.html %}
 
 <body>
-  
-  {% include header.html %}
-  
-  <section class="member-profile">
-    <div class="container">
+  <div class="container">
+    <div class="mprofile">
+      <div class="close-btn"></div>
+      
       <div class="row">
-        <ul>
-        {% for _member in site.data.members %}
-        {% assign member = _member[1] %}
-        {% endfor %}
-        </ul>
-        <div class="col-md-4 col-xs-12">
+        <div class="col-lg-4 col-md-4 col-xs-12">
           <div class="picture">
-            <img src="{{ member.picture }}" />
+            <img src="http://i.imgur.com/UFXTTvN.png" />
           </div>
         </div>
-        <div class="col-md-8 col-xs-12">
-  
-        <div class="basic-info">
-          <div class = "profile-header">
-            <div class="name">{{ member.name }}</div>
-            <div class="quick-info">{{ member.year }} | {{ member.college }} | {{ member.skills }}</div>
-          </div>
-        </div>
-          
-      </div>
         
+        <div class="col-lg-8 col-md-8 col-xs-12">
+          <div class="mprofile-header">
+            <div class="name">Mark Zuckerberg</div>
+            <div class="quick-info">Harvard 2006 | Computer Science</div>
+          </div>
           
+          <div class="mprofile-item skills">
+            <ul class="inline-list">
+              <li>MySQL</li> <li>PHP</li> <li>Stealing People's Projects</li>
+              <li>Wearing Da Hoddie</li>
+            </ul>
+          </div>
+          
+          <div class="mprofile-item about">
+            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+          </div>
+
+          <div class="mprofile-item networks">
+            <ul class="inline-list">
+              <li><a href="#">github</a></li>
+              <li><a href="#">facebook</a></li>
+              <li><a href="#">email</a></li>
+            </ul>
+          </div>
+
+          <div class="mprofile-item experience">
+            <label>Projects & Experience</label>
+            <ul>
+              <li>
+                <strong>Facebook, CEO</strong>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+              </li>
+              <li>
+                <strong>Creator, Facemash</strong>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="mprofile-item extracurriculars">
+              <label>Extra Curriculars &amp; Hobbies</label>
+              <ul>
+                <li>
+                  asdf
+                </li>
+              </ul>
+            </div>
         </div>
-      </div>
       </div>
     </div>
-  </section>
-  <a href="twitter.com">Twitter</a>
-  <span style="background: yellow; color: red; display: block">
-    more text
-  </span>
+  </div>
 </body>
 </html>

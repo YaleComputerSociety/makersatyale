@@ -16,6 +16,10 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/css/font.css">
+  
+  <script src='https://cdn.jsdelivr.net/lodash/4.10.0/lodash.min.js'></script>
+  <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="
+    crossorigin="anonymous"></script>
 </head>
 
 
@@ -23,33 +27,31 @@
   <header class="site-header">
     <div class="title-wrapper">
       <h1><a href="/">Makers at Yale</a></h1>
-      <h3>
-      Join people building cool stuff at Yale University.
-    </h3>
+      <h3>Join people building cool stuff at Yale University.</h3>
       <h4>
-      Here are <a href="">some</a> <a href="">cool</a> <a href="">stuff</a> people in this list have worked on.
-    </h4>
+        Here are <a href="">some</a> <a href="">cool</a> <a href="">stuff</a> people in this list have worked on.
+      </h4>
     </div>
-    <form>
-      <section class="panlist">
-        <label for="exampleInputEmail1">Add yourself to our mailing list!</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Your email here">
-        <button type="submit" class="btn btn-default">Submit</button>
-      </section>
+    <form class="ml-form">
+      <label for="exampleInputEmail1">Add yourself to our mailing list!</label>
+      <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="john.doe@yale.edu">
+      <button type="submit" class="btn btn-default">Submit</button>
     </form>
   </header>
 
   <section class="members coding-members">
     <div class="container">
+      <!--
       <div class="section-headers">
         <h1>Programming</h1>
         <h2>Here are the students who build software projects.</h2>
       </div>
+      -->
 
       <div class="container members">
         <div class="row">
            
-          <div class="member col-md-4 col-xs-12">
+          <div class="member col-md-4 col-xs-12" onClick="openMember('felipe-pires')">
             <div class="picture">
               <img src="http://graph.facebook.com/100000366187376/picture?width=400&height=400" />
             </div>
@@ -65,7 +67,7 @@
             </div>
           </div>
            
-          <div class="member col-md-4 col-xs-12">
+          <div class="member col-md-4 col-xs-12" onClick="openMember('yuxuan-ke')">
             <div class="picture">
               <img src="http://graph.facebook.com/725133061/picture?width=400&height=400" />
             </div>
@@ -81,7 +83,7 @@
             </div>
           </div>
            
-          <div class="member col-md-4 col-xs-12">
+          <div class="member col-md-4 col-xs-12" onClick="openMember('summer-wu')">
             <div class="picture">
               <img src="https://pbs.twimg.com/profile_images/701094340081414145/5qMFdVF1.jpg" />
             </div>
@@ -97,7 +99,7 @@
             </div>
           </div>
            
-          <div class="member col-md-4 col-xs-12">
+          <div class="member col-md-4 col-xs-12" onClick="openMember('zeb-mehring')">
             <div class="picture">
               <img src="http://graph.facebook.com/100002274614860/picture?width=400&height=400" />
             </div>
@@ -106,14 +108,14 @@
               <div class="college-year">
                 Morse 2019
               </div>
-              <div class="skills"></div>
+              <div class="skills">Trust me, I'm a professional.</div>
             </div>
             <div class="extended-info">
               <div class="pay"></div>
             </div>
           </div>
            
-          <div class="member col-md-4 col-xs-12">
+          <div class="member col-md-4 col-xs-12" onClick="openMember('kacha-mahadumrongkul')">
             <div class="picture">
               <img src="http://graph.facebook.com/100001182815852/picture?width=400&height=400" />
             </div>
@@ -129,7 +131,7 @@
             </div>
           </div>
            
-          <div class="member col-md-4 col-xs-12">
+          <div class="member col-md-4 col-xs-12" onClick="openMember('melina-delgado')">
             <div class="picture">
               <img src="http://graph.facebook.com/1196765670/picture?width=400&height=400" />
             </div>
@@ -147,8 +149,6 @@
           
         </div>
       </div>
-
-
     </div>
 
   </section>
@@ -167,7 +167,91 @@
 </div>
 </footer>
 
+  
+<div class="page-popover"></div>
+
+<script type="text/template" id="tmpl-member">
+  <div class="mprofile">
+    <div class="close-btn" onClick="<%= clickOut %>"></div>
+    
+    <div class="row">
+      <div class="col-lg-4 col-md-4 col-xs-12">
+        <div class="picture">
+          <img src="<%= member.picture %>" />
+        </div>
+      </div>
+      
+      <div class="col-lg-8 col-md-8 col-xs-12">
+        <div class="mprofile-header">
+          <div class="name"><%= member.name %></div>
+          <div class="quick-info">Harvard 2006 | Computer Science</div>
+        </div>
+        
+        <div class="mprofile-item skills">
+          <ul class="inline-list">
+            <li>MySQL</li> <li>PHP</li> <li>Stealing People's Projects</li>
+            <li>Wearing Da Hoddie</li>
+          </ul>
+        </div>
+        
+        <div class="mprofile-item about">
+          <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+        </div>
+
+        <div class="mprofile-item networks">
+          <ul class="inline-list">
+            <li><a href="#">github</a></li>
+            <li><a href="#">facebook</a></li>
+            <li><a href="#">email</a></li>
+          </ul>
+        </div>
+
+        <div class="mprofile-item experience">
+          <label>Projects & Experience</label>
+          <ul>
+            <li>
+              <strong>Facebook, CEO</strong>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+            </li>
+            <li>
+              <strong>Creator, Facemash</strong>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="mprofile-item extracurriculars">
+            <label>Extra Curriculars &amp; Hobbies</label>
+            <ul>
+              <li>
+                asdf
+              </li>
+            </ul>
+          </div>
+      </div>
+    </div>
+  </div>
+</script>
+
+<script>
+</script>
+
+<script>
+
+var members = {"felipe-pires":{"name":"Felipe Pires","year":2019,"college":"Ezra Stiles","picture":"http://graph.facebook.com/100000366187376/picture?width=400&height=400"},"yuxuan-ke":{"name":"Yuxuan Ke","year":2019,"email":"yuxuan.ke","college":"Branford","skills":["I can take off an orange peel in a single piece."],"picture":"http://graph.facebook.com/725133061/picture?width=400&height=400"},"summer-wu":{"name":"Summer Wu","class":2018,"college":"Morse","bio":"Hailing from Chicago, currently living in New Haven/Hong Kong, soon headed to San Francisco/New York City/Budapest, endeavoring to explore the world","interests":"virtual/augmented reality, health tech, tinkering with new technologies, practical projects","abilities":{"programming":"Python, Django, Java, Android, Javascript, C, Unity, HTML, CSS"},"resume":"https://sumwu.me/static/summer_wu_resume.pdf","links":{"github":"sw5813","facebook":"summer.wu.560","linkedin":"https://www.linkedin.com/profile/view?id=289449779","website":"https://sumwu.me/"},"picture":"https://pbs.twimg.com/profile_images/701094340081414145/5qMFdVF1.jpg"},"zeb-mehring":{"name":"Zeb Mehring","year":2019,"email":"zeb.mehring","college":"Morse","skills":["Trust me, I'm a professional."],"picture":"http://graph.facebook.com/100002274614860/picture?width=400&height=400"},"kacha-mahadumrongkul":{"name":"Kacha (Shogun) Mahadumrongkul","year":2019,"email":"kacha.mahadumrongkul","college":"Trumbull","skills":["Sing badly"],"picture":"http://graph.facebook.com/100001182815852/picture?width=400&height=400"},"melina-delgado":{"name":"Melina Delgado","year":2019,"college":"Timothy Dwight","email":"melina.delgado@yale.edu","skills":"music","picture":"http://graph.facebook.com/1196765670/picture?width=400&height=400","major":"Computer Science and Math","about":"Lives in TD.","currentprojects":"Makers at Yale","previousprojects":"None"}};
+var tmplMember = _.template($("#tmpl-member").html());
+
+function openMember(mid) {
+  if (members[mid] !== "undefined") {
+    var html = tmplMember({
+      member: members[mid],
+      clickOut: 'jQuery(\'.page-popover\').fadeOut();',
+    });
+    $(".page-popover").hide().html(html).fadeIn();
+  }
+  
+}
+</script>
 
 </body>
-
 </html>

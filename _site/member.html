@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-  
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,56 +16,75 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/css/font.css">
+  
+  <script src='https://cdn.jsdelivr.net/lodash/4.10.0/lodash.min.js'></script>
+  <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="
+    crossorigin="anonymous"></script>
 </head>
 
 
 <body>
-  
-  <header class="site-header">
-  <div class="title-wrapper">
-    <h1><a href="/">Makers at Yale</a></h1>
-    <h3>
-      Join people building cool stuff at Yale University.
-    </h3>
-    <h4>
-      Here are <a href="">some</a> <a href="">cool</a> <a href="">stuff</a> people in this list have worked on.
-    </h4>
-
-  </div>
-</header>
-
-  
-  <section class="member-profile">
-    <div class="container">
+  <div class="container">
+    <div class="mprofile">
+      <div class="close-btn"></div>
+      
       <div class="row">
-        <ul>
-        
-        </ul>
-        <div class="col-md-4 col-xs-12">
+        <div class="col-lg-4 col-md-4 col-xs-12">
           <div class="picture">
-            <img src="http://graph.facebook.com/1196765670/picture?width=400&height=400" />
+            <img src="http://i.imgur.com/UFXTTvN.png" />
           </div>
         </div>
-        <div class="col-md-8 col-xs-12">
-  
-        <div class="basic-info">
-          <div class = "profile-header">
-            <div class="name">Melina Delgado</div>
-            <div class="quick-info">2019 | Timothy Dwight | music</div>
-          </div>
-        </div>
-          
-      </div>
         
+        <div class="col-lg-8 col-md-8 col-xs-12">
+          <div class="mprofile-header">
+            <div class="name">Mark Zuckerberg</div>
+            <div class="quick-info">Harvard 2006 | Computer Science</div>
+          </div>
           
+          <div class="mprofile-item skills">
+            <ul class="inline-list">
+              <li>MySQL</li> <li>PHP</li> <li>Stealing People's Projects</li>
+              <li>Wearing Da Hoddie</li>
+            </ul>
+          </div>
+          
+          <div class="mprofile-item about">
+            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+          </div>
+
+          <div class="mprofile-item networks">
+            <ul class="inline-list">
+              <li><a href="#">github</a></li>
+              <li><a href="#">facebook</a></li>
+              <li><a href="#">email</a></li>
+            </ul>
+          </div>
+
+          <div class="mprofile-item experience">
+            <label>Projects & Experience</label>
+            <ul>
+              <li>
+                <strong>Facebook, CEO</strong>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+              </li>
+              <li>
+                <strong>Creator, Facemash</strong>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="mprofile-item extracurriculars">
+              <label>Extra Curriculars &amp; Hobbies</label>
+              <ul>
+                <li>
+                  asdf
+                </li>
+              </ul>
+            </div>
         </div>
-      </div>
       </div>
     </div>
-  </section>
-  <a href="twitter.com">Twitter</a>
-  <span style="background: yellow; color: red; display: block">
-    more text
-  </span>
+  </div>
 </body>
 </html>

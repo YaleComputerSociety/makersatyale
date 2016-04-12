@@ -9,33 +9,31 @@
   <header class="site-header">
     <div class="title-wrapper">
       <h1><a href="{{ site.baseurl }}/">Makers at Yale</a></h1>
-      <h3>
-      Join people building cool stuff at Yale University.
-    </h3>
+      <h3>Join people building cool stuff at Yale University.</h3>
       <h4>
-      Here are <a href="">some</a> <a href="">cool</a> <a href="">stuff</a> people in this list have worked on.
-    </h4>
+        Here are <a href="">some</a> <a href="">cool</a> <a href="">stuff</a> people in this list have worked on.
+      </h4>
     </div>
-    <form>
-      <section class="panlist">
-        <label for="exampleInputEmail1">Add yourself to our mailing list!</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Your email here">
-        <button type="submit" class="btn btn-default">Submit</button>
-      </section>
+    <form class="ml-form">
+      <label for="exampleInputEmail1">Add yourself to our mailing list!</label>
+      <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="john.doe@yale.edu">
+      <button type="submit" class="btn btn-default">Submit</button>
     </form>
   </header>
 
   <section class="members coding-members">
     <div class="container">
+      <!--
       <div class="section-headers">
         <h1>Programming</h1>
         <h2>Here are the students who build software projects.</h2>
       </div>
+      -->
 
       <div class="container members">
         <div class="row">
           {% for _member in site.data.members %} {% assign member = _member[1] %}
-          <div class="member col-md-4 col-xs-12">
+          <div class="member col-md-4 col-xs-12" onClick="openMember('{{ _member[0] }}')">
             <div class="picture">
               <img src="{{ member.picture }}" />
             </div>
@@ -53,13 +51,95 @@
           {% endfor %}
         </div>
       </div>
-
-
     </div>
 
   </section>
   {% include footer.html %}
+  
+<div class="page-popover"></div>
+
+<script type="text/template" id="tmpl-member">
+  <div class="mprofile">
+    <div class="close-btn" onClick="<%= clickOut %>"></div>
+    
+    <div class="row">
+      <div class="col-lg-4 col-md-4 col-xs-12">
+        <div class="picture">
+          <img src="<%= member.picture %>" />
+        </div>
+      </div>
+      
+      <div class="col-lg-8 col-md-8 col-xs-12">
+        <div class="mprofile-header">
+          <div class="name"><%= member.name %></div>
+          <div class="quick-info">Harvard 2006 | Computer Science</div>
+        </div>
+        
+        <div class="mprofile-item skills">
+          <ul class="inline-list">
+            <li>MySQL</li> <li>PHP</li> <li>Stealing People's Projects</li>
+            <li>Wearing Da Hoddie</li>
+          </ul>
+        </div>
+        
+        <div class="mprofile-item about">
+          <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+        </div>
+
+        <div class="mprofile-item networks">
+          <ul class="inline-list">
+            <li><a href="#">github</a></li>
+            <li><a href="#">facebook</a></li>
+            <li><a href="#">email</a></li>
+          </ul>
+        </div>
+
+        <div class="mprofile-item experience">
+          <label>Projects & Experience</label>
+          <ul>
+            <li>
+              <strong>Facebook, CEO</strong>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+            </li>
+            <li>
+              <strong>Creator, Facemash</strong>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="mprofile-item extracurriculars">
+            <label>Extra Curriculars &amp; Hobbies</label>
+            <ul>
+              <li>
+                asdf
+              </li>
+            </ul>
+          </div>
+      </div>
+    </div>
+  </div>
+</script>
+
+<script>
+</script>
+
+<script>
+
+var members = {{ site.data.members | jsonify }};
+var tmplMember = _.template($("#tmpl-member").html());
+
+function openMember(mid) {
+  if (members[mid] !== "undefined") {
+    var html = tmplMember({
+      member: members[mid],
+      clickOut: 'jQuery(\'.page-popover\').fadeOut();',
+    });
+    $(".page-popover").hide().html(html).fadeIn();
+  }
+  
+}
+</script>
 
 </body>
-
 </html>

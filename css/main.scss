@@ -50,52 +50,187 @@ $on-laptop:        800px;
         "syntax-highlighting"
 ;
 
-.member-profile {
-    // width: 300px;
+$blue: #426bba;
+
+.close-btn {
+    cursor: pointer;
+    
+    &:after {
+      display: inline-block;
+      content: "\00d7"; /* This will render the 'X' */
+    }
+    
+    &:hover {
+        color: #222;
+    }
+}
+
+.container {
+    max-width: 960px;
+}
+
+.page-popover {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+    background: white;
+}
+
+.site-header {
+    position: relative;
+    background: $blue;
+    color: white;
+    padding: 50px 40px;    
+    
+    .title-wrapper {
+        color: white;
+        
+        h1 a {
+            text-decoration: none;
+        }
+        a {
+            text-decoration: underline;
+            color: inherit;
+        }
+        h2 {
+        }
+    }
+    
+    .ml-form {
+        label {
+            // display: block;
+            margin-right: 10px;
+            // display: non;
+        }
+        
+        input[name=email] {
+            width: 300px;
+            display: inline-block;
+            // border-radius: 2;
+        }
+        
+        button {
+        }
+    }
+}
+
+.mprofile {
+    
+    
     padding: 20px;
     height: 300px;
     display: inline-block;
     vertical-align: top;
     text-align: center;
+    margin-top: 50px;
 
-    font-size: 12px;
-    font-family: "museo-sans";
-
-    .basic-info {
-        font: 400 15px "museo-sans";
-        text-align: left;
-
-        .profile-header {
-                .name {
-                    font-size: 30px;
-                    font-weight: bold;
-                }
-                .quick-info{
-                    font-size: 14px;
-                }
-                
-            }   
-        }
+    font: 400 15px "museo-sans";
+    text-align: left;
     
+    .close-btn {
+        position: absolute;
+        right: 30px;
+        top: 20px;
+        color: #555;
+        // font-weight: bold;
+        font-size: 20px;
+    }
+
     .picture img {
-        width: 300px;
-        height: 300px;
-        border-radius: 200px;
+        width: 90%;
+        height: 90%;
+        // border-radius: 200px;
         margin-bottom: 20px;
         
         @include transition(.2s);
-
+    }
+    
+    .mprofile-header {
+        margin-bottom: 20px;
+        
+        .name {
+            font-size: 40px;
+            font-weight: bold;
+        }
+        
+        .quick-info {
+            font-size: 20px;
         }
     }
+    
+    .row {
+        margin-bottom: 20px;
+    }
+    
+    .mprofile-item {
+        margin-bottom: 20px;
 
-.site-header {
+        label {
+            font-size: 15px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #666;
+        }
+        
+        &.networks {
+            a:hover {
+                text-decoration: none;
+            }
+        }
+        
+        &.skills {
+            ul li {
+                // background: #4A9BFF;
+                background: #EEE;
+                border-bottom: 2px solid #4A9BFF;
+                color: white;
+                color: #222;
+                padding: 4px 6px;
+                // border: 1px solid #19d;
+                margin: 0 4px 5px 0;
+                font-size: 13px;
+            }
+        }
+        
+        &.about {
+            line-height: 2;
+        }
+        
+        &.experience,
+        &.extracurriculars {
+            margin-top: 30px;
+            
+            label {
+                margin-bottom: 10px;
+            }
+            
+            ul li {
+                line-height: 1.5;
+                margin-left: 0;
+            }
+        }
+    }
+    
+    ul.inline-list {
+        margin-left: 0;
+        margin-bottom: -4px;
+        
+        li {
+            display: inline-block;
+            font-size: 15px;
+        }
+    }
 }
 
-section.members.coding-member
-{
+section.members {
     padding: 40px 0;
     
     .section-headers {
+        color: #666;
         
         h1, h2 {
             font-weight: bold;
@@ -106,8 +241,6 @@ section.members.coding-member
         h2 {
             font-size: 15px;
         }
-        
-        color: #666;
     }
     
     .members {
@@ -156,51 +289,3 @@ footer {
     background: $grey-color-light;
 }
 
-
-$blue: #426bba;
-
-/**
- * Site header
- */
-.site-header {
-    // border-top: 5px solid $grey-color-dark;
-    // border-bottom: 1px solid $grey-color-light;
-    // min-height: 56px;
-
-    // Positioning context for the mobile navigation icon
-    position: relative;
-    background: $blue;
-    color: white;
-    
-    .title-wrapper {
-        padding: 50px 40px;
-        color: white;
-        
-        h1 a {
-            text-decoration: none;
-        }
-        a {
-            text-decoration: underline;
-            color: inherit;
-        }
-        h2 {
-        }
-    }
-}
-
-.container {
-    max-width: 960px;
-}
-
-// begin the form experimentations
-
-section.panlist {
-    position: center;
-    width: 50%;
-    vertical-align: top;
-    text-align: center;
-    margin: auto;
-    
-}
-
-// end the form experimentations

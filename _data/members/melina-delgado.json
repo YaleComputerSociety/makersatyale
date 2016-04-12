@@ -4,5 +4,9 @@
     "college": "Timothy Dwight",
     "email": "melina.delgado@yale.edu",
     "skills": "music",
-    "picture": "http://graph.facebook.com/1196765670/picture?width=400&height=400"
+    "picture": "http://graph.facebook.com/1196765670/picture?width=400&height=400",
+    "major": "Computer Science and Math",
+    "about": "Lives in TD.",
+    "currentprojects": "Makers at Yale",
+    "previousprojects": "None"
 }
