@@ -385,7 +385,7 @@ header {
       font-weight: bold;
       text-transform: uppercase;
       color: #666; }
-    .profile .profile-item.networks a:hover {
+    .profile .profile-item.links a:hover {
       text-decoration: none; }
     .profile .profile-item.skills ul li {
       background: #4A9BFF;

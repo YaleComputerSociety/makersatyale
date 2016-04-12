@@ -94,11 +94,11 @@
           <p><%= member.bio %></p>
         </div>
 
-        <div class="profile-item networks">
+        <div class="profile-item links">
           <ul class="inline-list">
-            <li><a href="#">github</a></li>
-            <li><a href="#">facebook</a></li>
-            <li><a href="#">email</a></li>
+          <% if (member.links) for (var n in member.links) { %>
+            <li><a href="<%= member.links[n] %>"><%= n %></a></li>
+          <% } %>
           </ul>
         </div>
 
