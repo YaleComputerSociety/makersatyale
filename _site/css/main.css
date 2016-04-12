@@ -318,6 +318,8 @@ header {
       font-weight: bold; }
       header .title-wrapper h1 a {
         text-decoration: none; }
+    header .title-wrapper p {
+      max-width: 700px; }
     header .title-wrapper a {
       text-decoration: underline;
       color: inherit; }
@@ -326,6 +328,27 @@ header {
       margin-bottom: 20px; }
     header .title-wrapper h3 {
       font-size: 20px; }
+  header a.join-ml {
+    background: white;
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 0;
+    color: #444;
+    text-transform: uppercase;
+    padding: 8px 10px;
+    border: 3px solid #EEE;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+    margin-right: 10px;
+    text-decoration: none; }
+    header a.join-ml:hover {
+      box-shadow: 0 0 6px rgba(0, 0, 0, 0.5); }
+    header a.join-ml:active {
+      box-shadow: none; }
   header .ml-form label {
     margin-right: 10px; }
   header .ml-form input[name=email] {
@@ -478,7 +501,7 @@ section.members {
         line-height: 1.5;
         display: inline-block;
         margin: 0 3px 3px 0;
-        background: #08c;
+        background: #F3753A;
         color: white;
         padding: 3px 5px; }
     .member .info .bio {
@@ -503,4 +526,5 @@ section.members {
 
 footer {
   padding: 40px;
-  background: #e8e8e8; }
+  background: #e8e8e8;
+  font-family: "museo-sans", Arial; }
