@@ -157,22 +157,30 @@
 var members = {{ site.data.members | jsonify }};
 var tmplMember = _.template($("#tmpl-member").html());
 
+var _pastScrolled;
+
 function openMember(mid) {
   if (members[mid] !== "undefined") {
     var html = tmplMember({
       member: members[mid],
       clickOut: "closeMember('"+mid+"')",
     });
-    $(".page-popover").hide().html(html).fadeIn();
-    setTimeout(function(){ $(".members").hide(); }, 500);
-    $('[data-toggle="tooltip"]').tooltip()
-    $("body").scrollTop(0)
+    _pastScrolled = $("body").scrollTop();
+    // $('body').scrollTop(0);
+    $('body').animate({ scrollTop: 0 }, 100);
+    $(".page-popover").hide().html(html).fadeIn("slow", function () {
+      // $('body').animate({ scrollTop: 0 }, 100);
+      
+      $(".members").hide();
+      $('[data-toggle="tooltip"]').tooltip();
+    });
   }
 }
 
 function closeMember(mid) {
   $(".members").show();
   $('.page-popover').fadeOut();
+  $("body").scrollTop(_pastScrolled);
 }
 </script>
 
