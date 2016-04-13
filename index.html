@@ -164,8 +164,9 @@ function openMember(mid) {
       clickOut: "closeMember('"+mid+"')",
     });
     $(".page-popover").hide().html(html).fadeIn();
-    $(".members").hide();
+    setTimeout(function(){ $(".members").hide(); }, 500);
     $('[data-toggle="tooltip"]').tooltip()
+    $("body").scrollTop(0)
   }
 }
 

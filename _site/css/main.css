@@ -286,13 +286,15 @@ pre {
     color: #099; }
 
 .close-btn {
-  cursor: pointer; }
+  cursor: pointer;
+  vertical-align: middle;
+  text-align: center; }
   .close-btn:after {
     display: inline-block;
     content: "\00d7";
     /* This will render the 'X' */ }
   .close-btn:hover {
-    color: #222; }
+    color: #000; }
 
 .container {
   max-width: 960px; }
@@ -369,7 +371,13 @@ header {
     right: 30px;
     top: 20px;
     color: #555;
-    font-size: 20px; }
+    font-size: 30px;
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    border-radius: 40px; }
+    .profile .close-btn:hover {
+      background: #EEE; }
   .profile .picture img {
     width: 90%;
     height: 90%;
