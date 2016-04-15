@@ -6,5 +6,14 @@
     "skills": [
         "I can take off an orange peel in a single piece."
     ],
-    "picture": "http://graph.facebook.com/725133061/picture?width=400&height=400"
+     "links": {
+        "facebook": "https://www.facebook.com/ke.yuxuan"
+    },
+    "picture": "http://graph.facebook.com/725133061/picture?width=400&height=400",
+    "major": "Computer Science and Mathematics",
+    "about": "Does not live in TD.",
+    "available": true,
+    "currentprojects": "Makers at Yale",
+    "previousprojects": "None"
+    
 }

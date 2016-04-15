@@ -315,9 +315,10 @@ header {
   padding: 70px 60px;
   font-family: "museo-sans"; }
   header .title-wrapper {
-    color: white; }
+    color: white;
+    display: inline-block; }
     header .title-wrapper h1 {
-      font-size: 26px;
+      font-size: 56px;
       font-weight: bold; }
       header .title-wrapper h1 a {
         text-decoration: none; }

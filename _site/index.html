@@ -10,12 +10,12 @@
   <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
 ">
 
-  <link rel="canonical" href="http://yourdomain.com/">
-  <link rel="alternate" type="application/rss+xml" title="Makers At Yale" href="http://yourdomain.com/feed.xml">
+  <link rel="canonical" href="http://yourdomain.com/makersatyale/">
+  <link rel="alternate" type="application/rss+xml" title="Makers At Yale" href="http://yourdomain.com/makersatyale/feed.xml">
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-  <link rel="stylesheet" href="/css/main.css">
-  <link rel="stylesheet" href="/css/font.css">
+  <link rel="stylesheet" href="/makersatyale/css/main.css">
+  <link rel="stylesheet" href="/makersatyale/css/font.css">
   
   <script src='https://cdn.jsdelivr.net/lodash/4.10.0/lodash.min.js'></script>
   <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="
@@ -27,14 +27,17 @@
 <body>
   <header>
     <div class="title-wrapper">
-      <h1><a href="/">Makers at Yale</a></h1>
-      <h2>Join people building cool stuff at Yale University.</h2>
+      <h1><a href="/makersatyale/">Makers at Yale</a></h1>
+      <h3><a href="https://github.com/ygom/makersatyale#join-the-list" class="btn join-ml">Put your face here</a></h3>        
       <p>
-        This is a directory of yalies interested in <a href="">coding</a>, <a href="">designing</a>, and <a href="">soldering</a>. <br />Do you want to build cool stuff? <a href="https://github.com/ygom/makersatyale#join-the-list">Put your face here</a>.
+        <a href="javascript:alert('To join the mailing list, just send a message to felipe.pires@yal(...) using your yale email address.')" class="btn join-ml">Join our Mailing List</a>
       </p>
+            <h2>Join people building cool stuff at Yale University.</h2>
+
       <p>
-        <a href="javascript:alert('To join the mailing list, just send a message to felipe.pires@yal(...) using your yale email address.')" class="btn join-ml">Join our Mailing List</a> to get updates about events and opportunities for making.
+        This is a directory of yalies interested in <a href="">coding</a>, <a href="">designing</a>, and <a href="">soldering</a>. <br />Do you want to build cool stuff?
       </p>
+      
     </div>
   </header>
 
@@ -80,6 +83,8 @@
             </div>
             <div class="info">
               <div class="basics">
+                
+                  <div class="circle available" data-toggle="tooltip" data-placement="bottom" title="Available for projects."></div>
                 
                 <strong>Yuxuan Ke</strong>, Branford 2019
               </div>
@@ -138,7 +143,7 @@
               <div class="bio"></div>
               <div class="skills">
                 
-                  <span>Trust me, I'm a professional.</span>
+                  <span>Trust me, I'm a professional</span>
                 
               </div>
             </div>
@@ -283,7 +288,7 @@
 
 <script>
 
-var members = {"felipe-pires":{"name":"Felipe Pires","year":2019,"college":"Ezra Stiles","major":"Computer Science & Economics","picture":"http://graph.facebook.com/100000366187376/picture?width=400&height=400","skills":["Backend (Python, Node, Express)","Frontend (React)","Project Management","Mobile (Swift, Android)"],"experience":[{"title":"Member of YGM's ECD Team","time":"NOW","detail":"I'm currently helping out (not) with a YGM project for building a directory for extracurriculars at Yale.","tags":["Node","Angular"]},{"title":"Developer of BulldogBook","time":"2016","detail":"Chrome Extension that allows Yale students to see suite and residential college information on the profile of other Yale students.","tags":["Javascript"]},{"title":"Creator of QI Labs","time":"2014'15","detail":"Social network for students interested in extracurricular opportunities. Programmed a wiki system for extracurriculars and a gamified platform where students can solve problems from past scientific olympiads. Open-sourced at <a href='http://github.com/f03lipe/qilabs'>github.com/f03lipe/qilabs</a>.","tags":["Node","React","MongoDb","Redis"]},{"title":"CTO & Communtiy Mobilizer at Turma Cidadã","time":"2011’14","detail":"NGO that gives college and high school students in Brazil the opportunity to impact their local communities. Recruited students for volunteering, created the NGO’s website using django-cms and lead the media team for two years"}],"extracurriculars":[{"title":"Liberal Party","time":"2016"},{"title":"Yale Guild of Makers","time":"2016","detail":"The oldest programming club at Yale."},{"title":"Member of the Brazil Club","time":"2016","tags":["Leadership"]}],"links":{"github":"http://github.com/f03lipe","facebook":"http://facebook.com/felipearagaopires"},"available":true,"bio":"Generalist programmer, focused on web development. Collaborating on great things at YGM. I'm interested in the intersection of computer science and humanities, and that's what defines my Yale experience.<br />Particularly interested in <strong>virtual reality</strong> and <strong>machine learning</strong> projects.","smallBio":"Generalist programmer, focused on web development. Collaborating on great things at YGM."},"yuxuan-ke":{"name":"Yuxuan Ke","year":2019,"email":"yuxuan.ke","college":"Branford","skills":["I can take off an orange peel in a single piece."],"picture":"http://graph.facebook.com/725133061/picture?width=400&height=400"},"summer-wu":{"name":"Summer Wu","year":2018,"college":"Morse","major":"Computer Science","picture":"https://pbs.twimg.com/profile_images/701094340081414145/5qMFdVF1.jpg","skills":["Python","Django","Java","Android","Javascript","C","Unity","HTML","CSS"],"experience":[],"extracurriculars":[],"links":{"resume":"https://sumwu.me/static/summer_wu_resume.pdf","facebook":"http://facebook.com/summer.wu.560","github":"sw5813","linkedin":"https://www.linkedin.com/profile/view?id=289449779","website":"https://sumwu.me"},"available":false,"bio":"Hailing from Chicago, currently living in New Haven/Hong Kong, soon headed to San Francisco/New York City/Budapest, endeavoring to explore the world. I'm interested in virtual/augmented reality, health tech, tinkering with new technologies and practical projects.","smallBio":"Hailing from Chicago, currently living in New Haven/Hong Kong, soon headed to SF/NY/Budapest, endeavoring to explore the world."},"zeb-mehring":{"name":"Zeb Mehring","year":2019,"email":"zeb.mehring","college":"Morse","skills":["Trust me, I'm a professional."],"picture":"http://graph.facebook.com/100002274614860/picture?width=400&height=400"},"melina-delgado":{"name":"Melina Delgado","year":2019,"college":"Timothy Dwight","email":"melina.delgado@yale.edu","skills":"music","picture":"http://graph.facebook.com/1196765670/picture?width=400&height=400","major":"Computer Science and Math","about":"Lives in TD.","currentprojects":"Makers at Yale","previousprojects":"None"}};
+var members = {"felipe-pires":{"name":"Felipe Pires","year":2019,"college":"Ezra Stiles","major":"Computer Science & Economics","picture":"http://graph.facebook.com/100000366187376/picture?width=400&height=400","skills":["Backend (Python, Node, Express)","Frontend (React)","Project Management","Mobile (Swift, Android)"],"experience":[{"title":"Member of YGM's ECD Team","time":"NOW","detail":"I'm currently helping out (not) with a YGM project for building a directory for extracurriculars at Yale.","tags":["Node","Angular"]},{"title":"Developer of BulldogBook","time":"2016","detail":"Chrome Extension that allows Yale students to see suite and residential college information on the profile of other Yale students.","tags":["Javascript"]},{"title":"Creator of QI Labs","time":"2014'15","detail":"Social network for students interested in extracurricular opportunities. Programmed a wiki system for extracurriculars and a gamified platform where students can solve problems from past scientific olympiads. Open-sourced at <a href='http://github.com/f03lipe/qilabs'>github.com/f03lipe/qilabs</a>.","tags":["Node","React","MongoDb","Redis"]},{"title":"CTO & Communtiy Mobilizer at Turma Cidadã","time":"2011’14","detail":"NGO that gives college and high school students in Brazil the opportunity to impact their local communities. Recruited students for volunteering, created the NGO’s website using django-cms and lead the media team for two years"}],"extracurriculars":[{"title":"Liberal Party","time":"2016"},{"title":"Yale Guild of Makers","time":"2016","detail":"The oldest programming club at Yale."},{"title":"Member of the Brazil Club","time":"2016","tags":["Leadership"]}],"links":{"github":"http://github.com/f03lipe","facebook":"http://facebook.com/felipearagaopires"},"available":true,"bio":"Generalist programmer, focused on web development. Collaborating on great things at YGM. I'm interested in the intersection of computer science and humanities, and that's what defines my Yale experience.<br />Particularly interested in <strong>virtual reality</strong> and <strong>machine learning</strong> projects.","smallBio":"Generalist programmer, focused on web development. Collaborating on great things at YGM."},"yuxuan-ke":{"name":"Yuxuan Ke","year":2019,"email":"yuxuan.ke","college":"Branford","skills":["I can take off an orange peel in a single piece."],"links":{"facebook":"https://www.facebook.com/ke.yuxuan"},"picture":"http://graph.facebook.com/725133061/picture?width=400&height=400","major":"Computer Science and Mathematics","about":"Does not live in TD.","available":true,"currentprojects":"Makers at Yale","previousprojects":"None"},"summer-wu":{"name":"Summer Wu","year":2018,"college":"Morse","major":"Computer Science","picture":"https://pbs.twimg.com/profile_images/701094340081414145/5qMFdVF1.jpg","skills":["Python","Django","Java","Android","Javascript","C","Unity","HTML","CSS"],"experience":[],"extracurriculars":[],"links":{"resume":"https://sumwu.me/static/summer_wu_resume.pdf","facebook":"http://facebook.com/summer.wu.560","github":"sw5813","linkedin":"https://www.linkedin.com/profile/view?id=289449779","website":"https://sumwu.me"},"available":false,"bio":"Hailing from Chicago, currently living in New Haven/Hong Kong, soon headed to San Francisco/New York City/Budapest, endeavoring to explore the world. I'm interested in virtual/augmented reality, health tech, tinkering with new technologies and practical projects.","smallBio":"Hailing from Chicago, currently living in New Haven/Hong Kong, soon headed to SF/NY/Budapest, endeavoring to explore the world."},"zeb-mehring":{"name":"Zeb Mehring","year":2019,"email":"zeb.mehring","college":"Morse","skills":["Trust me, I'm a professional"],"picture":"http://graph.facebook.com/100002274614860/picture?width=400&height=400"},"melina-delgado":{"name":"Melina Delgado","year":2019,"college":"Timothy Dwight","email":"melina.delgado@yale.edu","skills":"music","picture":"http://graph.facebook.com/1196765670/picture?width=400&height=400","major":"Computer Science and Math","about":"Lives in TD.","currentprojects":"Makers at Yale","previousprojects":"None"}};
 var tmplMember = _.template($("#tmpl-member").html());
 
 var _pastScrolled;
