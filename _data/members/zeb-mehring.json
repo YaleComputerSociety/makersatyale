@@ -27,9 +27,13 @@
     ],
     "links":    {
         "github": "http://github.com/zebmehring",
-        "facebook": "http://facebook.com/zeb_mehring"
+        "facebook": "http://facebook.com/zeb_mehring",
+        "website": "http://zebmehring.com"
     },
     "available": true,
-    "bio": "Traveler, actor, and aspiring programmer. </br> My passions lie in communicating and sharing ideas with others, working with technology, and making everyone's lives a little bit better. </br> http://www.zebmehring.com",
-    "smallBio": "Traveler, actor, and aspiring programmer."
+    "bio": "Traveler, actor, and aspiring programmer. </br> I travel the world with my family, act in fascinating and engaging roles, and
+    in my free time, I love to lift weights, read, and converse with interesting people. </br> My passions lie in communicating and sharing 
+    ideas with others, working with technology, and making everyone's lives a little bit better.",
+    "smallBio": "Traveler, actor, and aspiring programmer. </br> I travel the world with my family, act in fascinating and engaging roles, 
+    and in my free time, I love to lift weights, read, and converse with interesting people."
 }
