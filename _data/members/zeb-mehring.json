@@ -5,12 +5,13 @@
     "major": "Engineering/Computing (?)",
     "picture": "http://graph.facebook.com/100002274614860/picture?width=400&height=400",
      "skills": [
-        "C", "C++", "actor", "professional epicawesomesuperdude"
+        "C", "C++", "actor", "Spanish", "professional epicawesomesuperdude"
     ],
     "experience": [
         {
             "title": "YGM",
             "time": "2016",
+            "detail": "Worked on creating M@Y."
             "title": "Constellations",
             "time": "2016",
             "detail": "Played Roland in Constellations at the Calhoun Cabaret in April 2016.",
