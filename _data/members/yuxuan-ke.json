@@ -6,10 +6,33 @@
     "skills": [
         "I can take off an orange peel in a single piece."
     ],
+    "links": {
+        "facebook": "https://www.facebook.com/ke.yuxuan"
+    },
     "picture": "http://graph.facebook.com/725133061/picture?width=400&height=400",
     "major": "Computer Science and Mathematics",
     "about": "Practices some scapulimancy.",
     "available": true,
     "currentprojects": "Makers at Yale",
-    "previousprojects": "None"
+    "previousprojects": "None",
+    "bio": "Experienced scapulimancer.",
+    "extracurriculars": [
+        {
+            "title": "Yale Guild of Makers",
+            "time": "2016",
+        },
+        {
+            "title": "Student Tech",
+            "time": "2016",
+        }
+    ],
+    "experience": [
+        {
+            "title": "Member of YGM's Makers Team",
+            "time": "2016",
+            "detail": "I'm currently helping out with a YGM project for building a community of Yale makers.",
+            "tags":
+        },
+    ],
+    
 }
