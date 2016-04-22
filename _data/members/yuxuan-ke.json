@@ -4,16 +4,48 @@
     "email": "yuxuan.ke",
     "college": "Branford",
     "skills": [
-        "I can take off an orange peel in a single piece."
+        "Java"
     ],
+<<<<<<< HEAD
      "links": {
+=======
+    "links": {
+>>>>>>> cded8b846db548bfe727337806e4ad2c8b16e807
         "facebook": "https://www.facebook.com/ke.yuxuan"
     },
     "picture": "http://graph.facebook.com/725133061/picture?width=400&height=400",
     "major": "Computer Science and Mathematics",
+<<<<<<< HEAD
     "about": "Does not live in TD.",
     "available": true,
     "currentprojects": "Makers at Yale",
     "previousprojects": "None"
     
 }
+=======
+    "available": true,
+    "currentprojects": "Makers at Yale",
+    "previousprojects": "None",
+    "bio": "Interested in the workings of complex systems, such as computers, language, and Mathematics. Always wanting and willing to learn. Highly vulnerable to being <a href='https://xkcd.com/356/'>nerd-sniped</a>.",
+    "smallBio": "Tinkerer and learner. Enjoys solving challenging problems.",
+    "extracurriculars": [
+        {
+            "title": "Yale Guild of Makers",
+            "time": "2016",
+        },
+        {
+            "title": "Student Tech",
+            "time": "2016",
+        }
+    ],
+    "experience": [
+        {
+            "title": "Member of YGM's Makers Team",
+            "time": "2016",
+            "detail": "I'm currently helping out with a YGM project for building a community of Yale makers.",
+            "tags": []
+        },
+    ],
+    
+}
+>>>>>>> cded8b846db548bfe727337806e4ad2c8b16e807
