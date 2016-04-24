@@ -5,7 +5,7 @@
     "major": "Math/Linguistics",
     "picture": "http://i.imgur.com/QUHK0Pe.png",
     "skills": [
-        "Python", "Java", "C", "JavaScript", "Bukkit API", "Icelandic", "Middle Egyptian", "Latin", "Game Design", "Useless Proofs"
+        "Python", "Java", "C", "JavaScript", "Bukkit API", "Minecraft Modding", "Icelandic", "Old Norse", "Middle Egyptian", "Latin", "Game Design", "Formal Language Theory", "Historical Linguistics"
     ],
     "experience": [
         {
@@ -13,6 +13,12 @@
             "time": "2016",
             "detail": "I'm currently helping out with a YGM project for building a directory for extracurriculars at Yale.",
             "tags": ["Node", "Angular"]
+        },
+        {
+            "title": "Minecraft Plugin Developer",
+            "time": "2011-2016",
+            "detail": "I'm an official plugin developer for Bukkit, which is the most popular API for Minecraft servers.",
+            "tags": ["Minecraft", "Bukkit", "Game Design"]
         },
     ],
     "extracurriculars": [
@@ -24,7 +30,7 @@
         {
             "title": "Yale Political Union",
             "time": "2016",
-            "desc": "Not a member of any party, although I went to enough debates that I'm technically a member"
+            "desc": "Not a member of any party, although I went to enough debates that I'm technically a member of the umbrella organization"
         },
     ],
     "links": {
