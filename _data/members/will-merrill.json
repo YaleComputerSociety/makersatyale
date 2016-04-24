@@ -18,8 +18,13 @@
     "extracurriculars": [
         {
             "title": "Yale DotA 2",
-            "time": "2016"
+            "time": "2016",
             "desc": "Yale's premier eSports organization for DotA 2"
+        },
+        {
+            "title": "Yale Political Union",
+            "time": "2016",
+            "desc": "Not a member of any party, although I went to enough debates that I'm technically a member"
         },
     ],
     "links": {
