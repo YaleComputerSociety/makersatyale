@@ -14,12 +14,6 @@
             "detail": "I'm currently helping out with a YGM project for building a directory for extracurriculars at Yale.",
             "tags": ["Node", "Angular"]
         },
-        {
-            "title": "Minecraft Plugin Developer",
-            "time": "2011-2016",
-            "detail": "I'm an official plugin developer for Bukkit, which is the most popular API for Minecraft servers.",
-            "tags": ["Minecraft", "Bukkit", "Game Design"]
-        },
     ],
     "extracurriculars": [
         {
@@ -39,4 +33,5 @@
     },
     "available": true,
     "bio": "Interested in formal language theory, programming, and game design. Collaborating on great things at YGM, and trying to build Yale DotA2 into a respectable college e-sports organization.",
+    "shortBio": "I've spent a lot of time learning useless dead languages and I enjoy fun programming projects. I also play a lot of video games",
 }
