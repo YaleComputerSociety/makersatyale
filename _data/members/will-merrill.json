@@ -5,7 +5,7 @@
     "major": "Math/Linguistics",
     "picture": "http://i.imgur.com/QUHK0Pe.png",
     "skills": [
-        "Python", "Javascript (React)", "Swift and Android"
+        "Python", "Java", "C", "JavaScript", "Bukkit API", "Icelandic", "Middle Egyptian", "Latin", "Game Design", "Useless Proofs"
     ],
     "experience": [
         {
@@ -17,8 +17,9 @@
     ],
     "extracurriculars": [
         {
-            "title": "Yale Dota",
+            "title": "Yale DotA 2",
             "time": "2016"
+            "desc": "Yale's premier eSports organization for DotA 2"
         },
     ],
     "links": {
@@ -26,6 +27,5 @@
         "facebook": "https://www.facebook.com/william.merrill.9?fref=ts"
     },
     "available": true,
-    "bio": "Generalist programmer, focused on peeing around campus. Collaborating on great things at YGM. <br /> I'm interested in Sasha Pup and humanities, and that's what defines my Yale experience.",
-    "smallBio": "Generalist programmer, focused on peeing around campus. Collaborating on great things at YGM."
+    "bio": "Interested in formal language theory, programming, and game design. Collaborating on great things at YGM, and trying to build Yale DotA2 into a respectable college e-sports organization.",
 }
