@@ -84,15 +84,23 @@ $color-tag: #F3753A; // #4A9BFF;
     background: white;
 }
 
+#ml-popover {
+    p {
+        line-height: 2;
+    }
+    li {
+        line-height: 2;
+    }
+}
+
 header {
     position: relative;
     background: $blue;
     color: white;
-    
+    padding: 70px 60px; 
     font-family: "museo-sans";
     
     .title-wrapper {
-        padding: 70px 60px; 
         color: white;
         h1 {
             font-size: 56px;
@@ -120,6 +128,7 @@ header {
     }
     
     a.join-ml {
+        text-align: center;
         background: white;
         font-weight: bold;
         font-size: 15px;
@@ -130,7 +139,7 @@ header {
         border: 3px solid #EEE;
         box-shadow: 0 0 6px rgba(0,0,0,.2);
         @include transition(.2s);
-        margin-right: 10px;
+        margin-right: 6px;
         text-decoration: none;
         
         &:hover {
@@ -160,7 +169,7 @@ header {
     }
 }
 
-.profile {
+.page-popover .container {
     padding: 20px;
     height: 300px;
     display: table;

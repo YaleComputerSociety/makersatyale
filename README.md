@@ -59,6 +59,17 @@ After you've edited your information, you're ready to "commit your file" and pus
 
 Then click "Commit changes" and you're done. A request will be created to add your file to the project, and we'll answer it in a bit.
 
+### "How to Submit"'s FAQ
+
+#### What do I use for the "picture" attribute?
+
+We recommend using the path to your own Facebook profile picture, like so:
+
+`"picture": "https://graph.facebook.com/<myidhere>/picture?width=400&height=400"`
+
+replacing `<idhere>` with your own facebook id. To find your facebook id, check
+out this website: [findmyfbid.com](http://findmyfbid.com/).
+
 
 ## Ideas
 

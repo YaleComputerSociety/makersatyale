@@ -6,23 +6,11 @@
     "skills": [
         "Java"
     ],
-<<<<<<< HEAD
-     "links": {
-=======
     "links": {
->>>>>>> cded8b846db548bfe727337806e4ad2c8b16e807
         "facebook": "https://www.facebook.com/ke.yuxuan"
     },
     "picture": "http://graph.facebook.com/725133061/picture?width=400&height=400",
     "major": "Computer Science and Mathematics",
-<<<<<<< HEAD
-    "about": "Does not live in TD.",
-    "available": true,
-    "currentprojects": "Makers at Yale",
-    "previousprojects": "None"
-    
-}
-=======
     "available": true,
     "currentprojects": "Makers at Yale",
     "previousprojects": "None",
@@ -48,4 +36,3 @@
     ],
     
 }
->>>>>>> cded8b846db548bfe727337806e4ad2c8b16e807

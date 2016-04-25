@@ -9,16 +9,13 @@
   <header>
     <div class="title-wrapper">
       <h1><a href="{{ site.baseurl }}/">Makers at Yale</a></h1>
-      <p class="text-right">
-        <a class="btn join-ml" href="https://github.com/ygom/makersatyale#join-the-list" role="button">Put your face here</a> 
-        <a class="btn join-ml" href="javascript:alert('To join the mailing list, just send a message to felipe.pires@yal(...) using your yale email address.')" role="button">Join our Mailing List</a>
-      </p>
       <h2>Join people building cool stuff at Yale University.</h2>
-
       <p>
-        This is a directory of yalies interested in <a href="">coding</a>, <a href="">designing</a>, and <a href="">soldering</a>. <br />Do you want to build cool stuff?
+        This is a directory of yalies interested in <a href="">coding</a>, <a href="">designing</a>, and soldering. <br />Do you want to build cool stuff? <a href="https://github.com/ygom/makersatyale#join-the-list">Put your face here</a>.
       </p>
-      
+      <p>
+        <a href="javascript:showMLInstructions()" class="btn join-ml">Join our Mailing List</a> to get updates about events and opportunities for making.
+      </p>
     </div>
   </header>
 
@@ -58,7 +55,35 @@
   </section>
   {% include footer.html %}
   
-<div class="page-popover"></div>
+<div class="page-popover" id="profile-popover"></div>
+
+<div class="page-popover" id="ml-popover">
+<div class="container">
+  <div class="close-btn" onClick="closePopover()"></div>
+    
+  <div class="row">
+    <div class="col-md-offset-2 col-md-8 col-xs-12">
+      <h1>Join the Mailing List</h1>
+      <p>
+        By joining our list you will receive emails about
+        <ul>
+          <li>upcoming <strong><abbr title="CS/EE/MecEng">maker events</abbr> on campus</strong></li>
+          <li>groups on campus organizing to <strong>attend hackathons</strong></li>
+          <li>curated emails with <strong>opportunities to work on software and hardware projects</strong></li>
+          <li>dinners and events for the community</li>
+        </ul>
+      </p>
+      <h2>How to Join</h2>
+      <p>
+        Go to our Groups page at <a href="https://groups.google.com/a/elilists.yale.edu/forum/#!forum/makers">groups.google.com/a/elilists.yale.edu/forum/#!forum/makers</a> and <strong>click "Apply to join group"</strong>. <em>You must be logged in with your Yale account to access the website.</em>
+      </p>
+      <p>
+        If you have any trouble doing that, you can <strong>email felipe.pires</strong> (you know the rest), and he will help you out.
+      </p>
+    </div>
+  </div>
+</div>
+</div>
 
 <script type="text/template" id="tmpl-member">
 <div class="container">
@@ -166,12 +191,12 @@ function openMember(mid) {
   if (members[mid] !== "undefined") {
     var html = tmplMember({
       member: members[mid],
-      clickOut: "closeMember('"+mid+"')",
+      clickOut: "closePopover('"+mid+"')",
     });
     _pastScrolled = $("body").scrollTop();
     // $('body').scrollTop(0);
     $('body').animate({ scrollTop: 0 }, 100);
-    $(".page-popover").hide().html(html).fadeIn("slow", function () {
+    $("#profile-popover").hide().html(html).fadeIn("slow", function () {
       // $('body').animate({ scrollTop: 0 }, 100);
       
       $(".members").hide();
@@ -180,11 +205,16 @@ function openMember(mid) {
   }
 }
 
-function closeMember(mid) {
+function showMLInstructions() {
+  $("#ml-popover").fadeIn('slow');
+}
+
+function closePopover() {
   $(".members").show();
   $('.page-popover').fadeOut();
   $("body").scrollTop(_pastScrolled);
 }
+
 </script>
 
 <script>

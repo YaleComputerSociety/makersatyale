@@ -308,13 +308,18 @@ pre {
   min-height: 100%;
   background: white; }
 
+#ml-popover p {
+  line-height: 2; }
+#ml-popover li {
+  line-height: 2; }
+
 header {
   position: relative;
   background: #426bba;
   color: white;
+  padding: 70px 60px;
   font-family: "museo-sans"; }
   header .title-wrapper {
-    padding: 70px 60px;
     color: white; }
     header .title-wrapper h1 {
       font-size: 56px;
@@ -332,6 +337,7 @@ header {
     header .title-wrapper h3 {
       font-size: 20px; }
   header a.join-ml {
+    text-align: center;
     background: white;
     font-weight: bold;
     font-size: 15px;
@@ -346,7 +352,7 @@ header {
     -ms-transition: 0.2s;
     -o-transition: 0.2s;
     transition: 0.2s;
-    margin-right: 10px;
+    margin-right: 6px;
     text-decoration: none; }
     header a.join-ml:hover {
       box-shadow: 0 0 6px rgba(0, 0, 0, 0.5); }
@@ -358,7 +364,7 @@ header {
     width: 300px;
     display: inline-block; }
 
-.profile {
+.page-popover .container {
   padding: 20px;
   height: 300px;
   display: table;
@@ -367,7 +373,7 @@ header {
   margin-top: 50px;
   font: 400 15px "museo-sans";
   text-align: left; }
-  .profile .close-btn {
+  .page-popover .container .close-btn {
     position: absolute;
     right: 30px;
     top: 20px;
@@ -377,9 +383,9 @@ header {
     height: 40px;
     line-height: 38px;
     border-radius: 40px; }
-    .profile .close-btn:hover {
+    .page-popover .container .close-btn:hover {
       background: #EEE; }
-  .profile .picture img {
+  .page-popover .container .picture img {
     width: 90%;
     height: 90%;
     margin-bottom: 20px;
@@ -388,15 +394,15 @@ header {
     -ms-transition: 0.2s;
     -o-transition: 0.2s;
     transition: 0.2s; }
-  .profile .profile-header {
+  .page-popover .container .profile-header {
     margin-bottom: 20px; }
-    .profile .profile-header .name {
+    .page-popover .container .profile-header .name {
       font-size: 40px;
       font-weight: bold;
       margin-bottom: 12px; }
-      .profile .profile-header .name > * {
+      .page-popover .container .profile-header .name > * {
         vertical-align: middle; }
-      .profile .profile-header .name .circle {
+      .page-popover .container .profile-header .name .circle {
         display: inline-block;
         width: 10px;
         height: 10px;
@@ -406,53 +412,53 @@ header {
         border-radius: 50px;
         cursor: pointer;
         background: #1D4; }
-    .profile .profile-header .quick-info {
+    .page-popover .container .profile-header .quick-info {
       font-size: 20px; }
-  .profile .row {
+  .page-popover .container .row {
     margin-bottom: 20px; }
-  .profile .profile-item {
+  .page-popover .container .profile-item {
     margin-bottom: 20px; }
-    .profile .profile-item label {
+    .page-popover .container .profile-item label {
       font-size: 15px;
       font-weight: bold;
       text-transform: uppercase;
       color: #666; }
-    .profile .profile-item.links a:hover {
+    .page-popover .container .profile-item.links a:hover {
       text-decoration: none; }
-    .profile .profile-item.skills ul li {
+    .page-popover .container .profile-item.skills ul li {
       background: #4A9BFF;
       color: white;
       padding: 4px 6px;
       margin: 0 4px 5px 0;
       font-size: 13px; }
-    .profile .profile-item.about {
+    .page-popover .container .profile-item.about {
       line-height: 2; }
-    .profile .profile-item.experience, .profile .profile-item.extracurriculars {
+    .page-popover .container .profile-item.experience, .page-popover .container .profile-item.extracurriculars {
       margin-top: 30px; }
-      .profile .profile-item.experience label, .profile .profile-item.extracurriculars label {
+      .page-popover .container .profile-item.experience label, .page-popover .container .profile-item.extracurriculars label {
         margin-bottom: 20px; }
-      .profile .profile-item.experience ul li, .profile .profile-item.extracurriculars ul li {
+      .page-popover .container .profile-item.experience ul li, .page-popover .container .profile-item.extracurriculars ul li {
         line-height: 1.5;
         margin-left: 0;
         margin-bottom: 15px; }
-        .profile .profile-item.experience ul li p, .profile .profile-item.extracurriculars ul li p {
+        .page-popover .container .profile-item.experience ul li p, .page-popover .container .profile-item.extracurriculars ul li p {
           margin-bottom: 5px; }
-          .profile .profile-item.experience ul li p p:last-child, .profile .profile-item.extracurriculars ul li p p:last-child {
+          .page-popover .container .profile-item.experience ul li p p:last-child, .page-popover .container .profile-item.extracurriculars ul li p p:last-child {
             margin-bottom: 0; }
-      .profile .profile-item.experience ul.tags, .profile .profile-item.extracurriculars ul.tags {
+      .page-popover .container .profile-item.experience ul.tags, .page-popover .container .profile-item.extracurriculars ul.tags {
         list-style: none;
         margin: 0;
         font-size: 12px; }
-        .profile .profile-item.experience ul.tags li, .profile .profile-item.extracurriculars ul.tags li {
+        .page-popover .container .profile-item.experience ul.tags li, .page-popover .container .profile-item.extracurriculars ul.tags li {
           background: #EEE;
           padding: 3px 6px;
           margin: 0 2px 2px 0;
           border-bottom: 1px solid #4A9BFF;
           display: inline-block; }
-  .profile ul.inline-list {
+  .page-popover .container ul.inline-list {
     margin-left: 0;
     margin-bottom: -4px; }
-    .profile ul.inline-list li {
+    .page-popover .container ul.inline-list li {
       display: inline-block;
       font-size: 15px; }
 
