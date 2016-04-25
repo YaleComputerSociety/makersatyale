@@ -65,7 +65,7 @@ Then click "Commit changes" and you're done. A request will be created to add yo
 
 We recommend using the path to your own Facebook profile picture, like so:
 
-`"picture": "https://graph.facebook.com/<myidhere>/picture?width=400&height=400"`
+`"picture": "https://graph.facebook.com/<idhere>/picture?width=400&height=400"`
 
 replacing `<idhere>` with your own facebook id. To find your facebook id, check
 out this website: [findmyfbid.com](http://findmyfbid.com/).
@@ -73,4 +73,4 @@ out this website: [findmyfbid.com](http://findmyfbid.com/).
 
 ## Ideas
 
-- Require users to authenticate, to prevent spam.
+- Use history.pushState() to replace url for user's profile path when you click on their profile.

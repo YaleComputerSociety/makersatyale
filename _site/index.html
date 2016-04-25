@@ -289,16 +289,19 @@
   <footer>
 <div class="container">
   <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-6 col-xs-12">
       <p>
         Makers at Yale is a directory of Yale students interested in creating
         design, programming and hardware projects.
       </p>
-      <p>A <a href="">Yale Guild of Makers</a> initiative by Melina, Yuxuan and Zeb.</p>
+      <p>
+        <small>Updated April 2016.</small>
+      </p>
+      
     </div>
     
-    <div class="col-md-3 col-md-offset-3">
-      Updated April 2016. 
+    <div class="col-md-6 col-xs-12">
+      <p>A <a href="">Yale Guild of Makers</a> initiative by Melina, Yuxuan and Zeb.</p>
     </div>
   </div>
 </div>
@@ -350,10 +353,10 @@
       <div class="col-lg-8 col-md-8 col-xs-12">
         <div class="profile-header">
           <div class="name">
-            <% if (member.available) { %>
-              <div class="circle available" data-toggle="tooltip" data-placement="top" title="Available for projects."></div>
-            <% } %>
             <span><%= member.name %></span>
+            <% if (member.available) { %>
+              <span class="label available" data-toggle="tooltip" data-placement="right" title="for projects.">Available</span>
+            <% } %>
           </div>
           <div class="quick-info"><%= member.major %> | <%= member.college %> <%= member.year %></div>
         </div>
@@ -378,6 +381,7 @@
           </ul>
         </div>
 
+        <% if (member.extracurriculars && member.extracurriculars.length) { %>
         <div class="profile-item extracurriculars">
           <label>Extra Curriculars &amp; Hobbies</label>
           <ul>
@@ -398,7 +402,9 @@
           <% }); %>
           </ul>
         </div>
+        <% } %>
 
+        <% if (member.experience && member.experience.length) { %>
         <div class="profile-item experience">
           <label>Projects & Experience</label>
           <ul>
@@ -420,6 +426,7 @@
           <% }); %>
           </ul>
         </div>
+        <% } %>
 
       </div>
     </div>

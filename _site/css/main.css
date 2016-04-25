@@ -412,6 +412,11 @@ header {
         border-radius: 50px;
         cursor: pointer;
         background: #1D4; }
+    .page-popover .container .profile-header .label.available {
+      font-size: 13px;
+      text-transform: uppercase;
+      background: #1D4;
+      cursor: default; }
     .page-popover .container .profile-header .quick-info {
       font-size: 20px; }
   .page-popover .container .row {

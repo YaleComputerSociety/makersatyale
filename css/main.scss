@@ -233,6 +233,12 @@ header {
             }
         }
         
+        .label.available {
+            font-size: 13px;
+            text-transform: uppercase;
+            background: #1D4;
+            cursor: default;
+        }
         
         .quick-info {
             font-size: 20px;
