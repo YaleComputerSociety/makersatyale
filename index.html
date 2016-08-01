@@ -21,13 +21,8 @@
   </header>
 
   <section class="members" style="display: none">
-    <div class="container-fluid">
       <!--
-      <div class="section-headers">
-        <h1>Programming</h1>
-        <h2>Here are the students who build software projects.</h2>
-      </div>
-      -->
+    <div class="container-fluid">
       <div class="row">
           {% for _member in site.data.members %} {% assign member = _member[1] %}
           <div class="member" onClick="openMember('{{ _member[0] }}')">
@@ -51,6 +46,7 @@
           </div>
           {% endfor %}
         </div>
+      -->
     </div>
 
   </section>
@@ -76,7 +72,7 @@
       </p>
       <h2>How to Join</h2>
       <p>
-        Go to our Groups page at <a href="https://groups.google.com/a/elilists.yale.edu/forum/#!forum/makers">groups.google.com/a/elilists.yale.edu/forum/#!forum/makers</a> and <strong>click "Apply to join group"</strong>. <em>You must be logged in with your Yale account to access the website.</em>
+        Go to our Groups page at <a href="https://groups.google.com/a/elilists.yale.edu/forum/#!forum/ycs">groups.google.com/a/elilists.yale.edu/forum/#!forum/ycs</a> and <strong>click "Apply to join group"</strong>. <em>You must be logged in with your Yale account to access the website.</em>
       </p>
       <p>
         If you have any trouble doing that, you can <strong>email felipe.pires</strong> (you know the rest), and he will help you out.
