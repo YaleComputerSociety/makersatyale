@@ -3,7 +3,7 @@
 	"year": 2019,
 	"college": "Ezra Stiles",
 	"major": "Math/Linguistics",
-	"picture": "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/13055515_979465515472249_6331922739633909911_n.jpg?oh=559b78bda09d8c53372c36f92a5c04a7&oe=577409B6",
+  "picture":"https://graph.facebook.com/100002264291889/picture?width=400&height=400",
 	"skills": [
 		"Python", "Java", "C", "JavaScript", "Bukkit API", "Minecraft Modding", "Icelandic", "Old Norse", "Middle Egyptian", "Latin", "Game Design", "Formal Language Theory", "Historical Linguistics"
 	],
