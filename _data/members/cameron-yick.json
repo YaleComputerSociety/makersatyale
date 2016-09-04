@@ -1,0 +1,53 @@
+{
+    "name": "Cameron Yick",
+    "year": 2017,
+    "college": "Berkeley",
+    "major": "Electrical Engineering / Computer Science",
+    "picture": "https://graph.facebook.com/100002894238534/picture?width=400&height=400",
+    "skills": [
+        "Data Visualization", "Tableau", "Python", "Frontend Javascript (Angular, Ember, React)", "Node.js", "D3.js", "Arduino", "Adobe Creative Suite"
+    ],
+    "experience": [
+        {
+            "title": "Software Engineer @ Metamarkets",
+            "time": "Summer 2016",
+            "detail": "Built internal profiling tools, and implemented performance optimizations for a petabyte-scale interactive visual data analysis web application. ",
+            "tags": ["Angular.js", "Node.js","Tableau","Python"]
+        },
+        {
+            "title": "Data Analyst @ Yale Data-Driven Environmental Solutions Group",
+            "time": "2015 - Present",
+            "detail": "Data scraping, munging, analysis, and visualization to assist environmental policy researchers for various data journalism projects and policy reports for group clients.",
+            "tags": ["Python", "Pandas", "D3.js", "Alteryx", "Tableau"]
+        },
+        {
+            "title": "Web Developer for Math as a Second Language",
+            "time": "2014 - Present",
+            "detail": "Built custom CMS for a math nonprofit to share resources, maintainable using a spreadsheet interface.",
+            "tags": ["PHP", "HTML", "CSS", "Javascript"]
+        }
+    ],
+    "extracurriculars": [
+        {
+            "title": "YaleMakes - President",
+            "time": "2014 - 2016"
+        },
+        {
+            "title": "YaleConnect - Participant, Head Coach",
+            "time": "2014 - 2016"
+        },
+        {
+            "title": "Splash at Yale - Instructor",
+            "time": "2013 - 2016"
+        }
+    ],
+    "links": {
+        "website": "http://www.cameronyick.us",
+        "github": "http://github.com/hydrosquall",
+        "twitter": "https://www.twitter.com/hydrosquall",
+        "classviz": "http://www.cameronyick.us/classviz"
+    },
+    "available": true,
+    "bio": "I'm curious about how play can be incorporated into our daily experiences through good design. I'm interested in using interactive data visualization to make data-driven decision making accessible to broader audiences, as well as using game design/psychology to promote greener cities and healthier living habits. I'm also a contributor to the swimmingscience.net blog, and a regular tosser of frisbees.",
+    "smallBio": "I like cleaning up pie charts and doodling with code."
+}
