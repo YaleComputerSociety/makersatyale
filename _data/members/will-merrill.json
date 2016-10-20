@@ -5,7 +5,7 @@
 	"major": "Math/Linguistics",
   "picture":"https://graph.facebook.com/100002264291889/picture?width=400&height=400",
 	"skills": [
-		"Python", "Java", "C", "JavaScript", "Bukkit API", "Minecraft Modding", "Icelandic", "Old Norse", "Middle Egyptian", "Latin", "Game Design", "Formal Language Theory", "Historical Linguistics"
+		"Python", "Java", "C", "JavaScript", "Bukkit API", "Minecraft Modding", "Computational Linguistics", "Historical Linguistics"
 	],
 	"experience": [{
 		"title": "Member of YGM's ECD Team",
@@ -14,13 +14,13 @@
 		"tags": ["Node", "Angular"]
 	}],
 	"extracurriculars": [{
+            "title": "the Book of Thoth",
+            "time": "Fall 2016",
+            "desc": "A natural-language puzzle/adventure game set in ancient Egypt, of which I am the lead developer. Steam release scheduled for late October. Contact me if you would like to contribute animation, level design, or programming!"
+        }, {
 		"title": "Yale DotA 2",
 		"time": "2016",
 		"desc": "Yale's premier eSports organization for DotA 2"
-	}, {
-		"title": "Yale Political Union",
-		"time": "2016",
-		"desc": "Not a member of any party, although apparently I went to enough debates that I'm technically a member of the umbrella organization"
 	}],
 	"links": {
 		"github": "http://github.com/viking-sudo-rm",
